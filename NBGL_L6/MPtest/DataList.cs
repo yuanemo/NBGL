@@ -53,8 +53,16 @@ namespace MPtest
         private string _s_cplh;
         private string _s_cwlx;
         private string _s_ddbh;
+        private string _s_cpms;
+        private string _s_beiz;
 
         //sale
+        public string s_beiz
+        {
+            get { return _s_beiz; }
+            set { _s_beiz = value; }
+        }
+
         public string s_ddbh
         {
             get { return _s_ddbh; }
@@ -146,6 +154,11 @@ namespace MPtest
         {
             get { return _s_user; }
             set { _s_user = value; }
+        }
+        public string s_cpms
+        {
+            get { return _s_cpms; }
+            set { _s_cpms = value; }
         }
 
         //

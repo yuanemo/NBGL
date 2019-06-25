@@ -451,7 +451,7 @@ namespace MPtest
 
         public DataTable czddbh(string time)
         {
-            string sql = " SELECT lotid FROM hljd.flow_sale WHERE lotid LIKE '"+ time + "' ORDER BY lotid DESC";
+            string sql = " SELECT lotid FROM hljd.flow_sale WHERE lotid LIKE '%"+ time + "%' ORDER BY lotid DESC";
             DataTable dt;
             return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
         }
@@ -459,42 +459,13 @@ namespace MPtest
         public string Addsale(DataList list)
         {
             string result = "";
-            string sql = "INSERT INTO hljd.flow_sale "
-            + "(Pmax, "
-            + "ProductType, "
-            + "UPPERPOWER, "
-            + "LOWERPOWER, "
-            + "Vmp, "
-            + "Imp, "
-            + "Voc, "
-            + "Isc, "
-            + "Volmax, "
-            + "Fusemax, "
-            + "Moduleapp, "
-            + "ProductFamily, "
-            + "createuser, "
-             + "DLBZ,"
-             + "CJ,"
-            + "createtime) "
-
-
-            + "VALUES "
-            + "('" + list.Pmax + "', "
-            + "'" + list.ProductType + "', "
-            + "" + list.Upperrpower + ", "
-            + "" + list.Lowerpower + ", "
-            + "'" + list.Vmp + "', "
-            + "'" + list.Imp + "', "
-            + "'" + list.Voc + "', "
-            + "'" + list.Isc + "', "
-            + "'" + list.Volmax + "', "
-            + "'" + list.Fusemax + "', "
-            + "'" + list.ModuleApp + "', "
-            + "'" + "ProductFamily" + "',"
-            + "'" + "createuser" + "', "
-            + "" + list.DLBZ + ", "
-            + "'" + list.CJ + "', "
-            + " NOW()); ";
+            string sql = "INSERT INTO hljd.flow_sale" +
+                        "(lotid, kehu, cgry, cplx, cpmc, ggxh, ytms, cplh, cwlx, danw," +
+                " shul, danj, zongj, xdrq, jhrq, suil, ghgs, hth, htlj, beiz, cpms, user)" +
+                "VALUES('" + list.s_ddbh + "', '" + list.s_khmc + "', '" + list.s_cgry + "', '" + list.s_cplx + "', '" + list.s_cpmc + "" +
+                "', '" + list.s_ggxh + "', '" + list.ytms + "', '" + list.s_cplh + "'," +
+                " '" + list.s_cwlx + "', '" + list.s_danw + "', '" + list.s_shul + "', '" + list.s_danj + "', '" + list.s_zongj + "', '" + list.s_xdri + "'," +
+                "'" + list.s_xqsj + "', '"+list.s_suil+"', '" + list.s_ghgs + "', '"+list.s_heth+"', '', '"+list.s_beiz+"', '"+list.s_cpms+"', '" + list.s_user + "') ";
 
             MysqlHelp.ExecuteNonquery(MysqlHelp.MySqlconn, sql, ref result);
             if (result.StartsWith("Success") == true)
@@ -506,5 +477,15 @@ namespace MPtest
                 return "fail";
             }
         }
+
+
+        public DataTable czSK(string Z)
+        {
+            string sql =
+                         "SELECT * FROM hljd.flow_sale where lotid ='"+Z+"'";
+            DataTable dt;
+            return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
+
     }
 }

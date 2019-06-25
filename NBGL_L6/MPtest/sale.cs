@@ -145,7 +145,7 @@ namespace MPtest
                 list.s_ddbh = time + "0001";
             }
             else
-                list.s_ddbh = (Convert.ToInt32(dt.Rows[0]["lotid"].ToString().Substring(5, 4))+1).ToString();
+                list.s_ddbh = (Convert.ToInt32(dt.Rows[0]["lotid"].ToString())+1).ToString();
 
             list.s_cpmc = s_cpmc.Text;
             list.s_khmc = s_khmc.Text;
@@ -157,7 +157,7 @@ namespace MPtest
             list.s_ggxh = s_ggxh.Text;
 
 
-
+            list.s_cwlx = s_cwlx.Text;
             list.s_suil = s_suil.Text;
             list.s_cplh = s_cplh.Text;
             list.s_cwlx = s_cwlx.Text;
@@ -168,11 +168,34 @@ namespace MPtest
             list.s_danj = s_danj.Text;
             list.s_zongj = s_zongj.Text;
             list.s_cpmc = s_cpmc.Text;
+            list.s_cpms = s_cpms.Text;
+            list.s_beiz = s_bz.Text;
             list.s_user = MainFrom.USERID;
 
             if (crud.Addsale(list) == "success")
             {
+                MessageBox.Show("下单成功！");
+                databind();
+            }
+        }
 
+        private void s_ddbh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                DataTable dt = crud.czSK(s_ddbh.Text);
+                s_kpzt.Text = dt.Rows[0]["kpzt"].ToString();
+                s_fpbh.Text = dt.Rows[0]["kpbh"].ToString();
+
+                s_kprq.Text = dt.Rows[0]["kprq"].ToString();
+                s_skzt.Text = dt.Rows[0]["skzt"].ToString();
+
+                s_kddh.Text = dt.Rows[0]["fpkddh"].ToString();
+                s_sksj.Text = dt.Rows[0]["sksj"].ToString();
+
+                s_kdfy.Text = dt.Rows[0]["kdfy"].ToString();
+                s_sjxx.Text = dt.Rows[0]["sjxi"].ToString();
             }
         }
     }
