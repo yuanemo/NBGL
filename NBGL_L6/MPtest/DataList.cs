@@ -55,6 +55,60 @@ namespace MPtest
         private string _s_ddbh;
         private string _s_cpms;
         private string _s_beiz;
+        private string _s_kpzt;
+        private string _s_fpbh;
+        private string _s_kprq;
+        private string _s_skzt;
+        private string _s_kddh;
+        private string _s_sksj;
+        private string _s_kdfy;
+        private string _s_sjxx;
+
+        //sale-sk
+        public string s_kpzt
+        {
+            get { return _s_kpzt; }
+            set { _s_kpzt = value; }
+        }
+        public string s_fpbh
+        {
+            get { return _s_fpbh; }
+            set { _s_fpbh = value; }
+        }
+        public string s_kprq
+        {
+            get { return _s_kprq; }
+            set { _s_kprq = value; }
+        }
+        public string s_skzt
+        {
+            get { return _s_skzt; }
+            set { _s_skzt = value; }
+        }
+        public string s_kddh
+        {
+            get { return _s_kddh; }
+            set { _s_kddh = value; }
+        }
+        public string s_sksj
+        {
+            get { return _s_sksj; }
+            set { _s_sksj = value; }
+        }
+        public string s_kdfy
+        {
+            get { return _s_kdfy; }
+            set { _s_kdfy = value; }
+        }
+        public string s_sjxx
+        {
+            get { return _s_sjxx; }
+            set { _s_sjxx = value; }
+        }
+
+
+
+
 
         //sale
         public string s_beiz

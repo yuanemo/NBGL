@@ -41,7 +41,6 @@ namespace MPtest
 
             #endregion
             databind();
-            s_danj.Text = MainFrom.USERID;
         }
         private void databind()
         {
@@ -49,11 +48,6 @@ namespace MPtest
         }
 
         //点击单元格时，将单元格属性显示
-        private void grd_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void grd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -96,42 +90,117 @@ namespace MPtest
             s_sjxx.Text = grd.Rows[e.RowIndex].Cells["sjxi"].Value.ToString();
         }
 
+        //客户按回车
         private void s_khmc_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            if (s_khmc.Text == "")
-            {
-                MessageBox.Show("客户名称不能为空");
-                return;
-            }
-            s_ghgs.Focus();
-        }
 
+        {
+            TextBox cb = (TextBox)sender;
+            string TT;
+            if (e.KeyCode == Keys.Enter)
+            {
+                switch (cb.TabIndex)
+                        {
+                            case 0 :
+                                TT = "客户名称";
+                                break;
+                            case 1:
+                                TT = label11.Text;
+                                break;
+                            case 2:
+                                TT = "";
+                                break;
+                            case 3:
+                                TT = label12.Text;
+                                break;
+                            case 4:
+                                TT = label3.Text;
+                                break;
+                            case 5:
+                                TT = label4.Text;
+                                break;
+                            case 6:
+                                TT = s_5.Text;
+                                break;
+                            case 7:
+                                TT = s_6.Text;
+                                break;
+
+                            case 8:
+                                TT = s_7.Text;
+                                break;
+                            case 9:
+                                TT = s_8.Text;
+                                break;
+                            case 10:
+                                TT = s_9.Text;
+                                break;
+                            case 11:
+                                TT = s_10.Text;
+                                break;
+                            case 12:
+                                TT = s_11.Text;
+                                break;
+                            case 13:
+                                TT = s_12.Text;
+                                break;
+                            case 14:
+                                TT = s_13.Text;
+                                break;
+                            case 15:
+                                TT = s_14.Text;
+                                break;
+                            case 16:
+                                TT = s_15.Text;
+                                s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString())* Convert.ToDouble(s_shul.Text.ToString())).ToString();
+                                break;
+                            case 17:
+                                TT = s_16.Text;
+                                break;
+                            case 18:
+                                TT = s_17.Text;
+                                break;
+                            case 19:
+                                TT = s_19.Text;
+                                break;
+                            default:
+                                TT="0";
+                                break;
+                        }
+
+                if (cb.Text.Trim() == "")
+                {
+                    MessageBox.Show(""+TT+"不能为空");
+                    return;
+                }
+                SendKeys.SendWait("{tab}");
+            }
+        }
+        //添加下单
         private void addBT_Click(object sender, EventArgs e)
         {
 
 
             if (
-                s_khmc.Text == "" ||
-                      s_ghgs.Text == "" ||
+                s_khmc.Text.Trim() == "" ||
+                      s_ghgs.Text.Trim() == "" ||
                       //s_ddbh.Text == "" ||
-                      s_cgry.Text == "" ||
-                      s_xdri.Text == "" ||
-                      s_xqsj.Text == "" ||
-                      s_xqsj.Text == "" ||
-                      s_cplx.Text == "" ||
-                       s_cpmc.Text == "" ||
-                       s_ggxh.Text == "" ||
-                       s_suil.Text == "" ||
+                      s_cgry.Text.Trim() == "" ||
+                      s_xdri.Text.Trim() == "" ||
+                      s_xqsj.Text.Trim() == "" ||
+                      s_xqsj.Text.Trim() == "" ||
+                      s_cplx.Text.Trim() == "" ||
+                       s_cpmc.Text.Trim() == "" ||
+                       s_ggxh.Text.Trim() == "" ||
+                       s_suil.Text.Trim() == "" ||
 
-                       s_cplh.Text == "" ||
-                       s_cwlx.Text == "" ||
-                      s_danw.Text == "" ||
-                      s_heth.Text == "" ||
+                       s_cplh.Text.Trim() == "" ||
+                       s_cwlx.Text.Trim() == "" ||
+                      s_danw.Text.Trim() == "" ||
+                      s_heth.Text.Trim() == "" ||
 
-                      s_shul.Text == "" ||
-                       s_danj.Text == "" ||
-                       s_zongj.Text == "" 
+                      s_shul.Text.Trim() == "" ||
+                       s_danj.Text.Trim() == "" ||
+                       s_zongj.Text.Trim() == "" 
                 )
                     {
                         MessageBox.Show("请先输入参数!");
@@ -174,15 +243,80 @@ namespace MPtest
 
             if (crud.Addsale(list) == "success")
             {
-                MessageBox.Show("下单成功！");
+                MessageBox.Show("订单"+list.s_ddbh +"下单成功！");
                 databind();
             }
         }
-
+        //订单编号回车
         private void s_ddbh_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+
+                DataTable dt = crud.czSK(s_ddbh.Text);
+
+                s_khmc.Text = dt.Rows[0]["kehu"].ToString();
+                s_ghgs.Text = dt.Rows[0]["ghgs"].ToString();
+                s_ddbh.Text = dt.Rows[0]["lotid"].ToString();
+                s_cgry.Text = dt.Rows[0]["cgry"].ToString();
+                s_xdri.Text = dt.Rows[0]["xdrq"].ToString();
+                s_xqsj.Text = dt.Rows[0]["jhrq"].ToString();
+                s_cplh.Text = dt.Rows[0]["cplh"].ToString();
+                s_cpmc.Text = dt.Rows[0]["cpmc"].ToString();
+                s_suil.Text = dt.Rows[0]["suil"].ToString();
+                s_ggxh.Text = dt.Rows[0]["ggxh"].ToString();
+                s_cplx.Text = dt.Rows[0]["cplx"].ToString();
+                //2019.05.20
+                s_cwlx.Text = dt.Rows[0]["cwlx"].ToString();
+                s_danw.Text = dt.Rows[0]["danw"].ToString();
+
+                s_heth.Text = dt.Rows[0]["hth"].ToString();
+                s_shul.Text = dt.Rows[0]["shul"].ToString();
+                s_danj.Text = dt.Rows[0]["danj"].ToString();
+                s_zongj.Text = dt.Rows[0]["zongj"].ToString();
+
+                s_bz.Text = dt.Rows[0]["beiz"].ToString();
+                s_cpms.Text = dt.Rows[0]["cpms"].ToString();
+
+
+                s_kpzt.Text = dt.Rows[0]["kpzt"].ToString();
+                s_fpbh.Text = dt.Rows[0]["kpbh"].ToString();
+
+                s_kprq.Text = dt.Rows[0]["kprq"].ToString();
+                s_skzt.Text = dt.Rows[0]["skzt"].ToString();
+
+                s_kddh.Text = dt.Rows[0]["fpkddh"].ToString();
+                s_sksj.Text = dt.Rows[0]["sksj"].ToString();
+
+                s_kdfy.Text = dt.Rows[0]["kdfy"].ToString();
+                s_sjxx.Text = dt.Rows[0]["sjxi"].ToString();
+
+
+            }
+        }
+        //修改收款
+        private void x_add_Click(object sender, EventArgs e)
+        {
+            if (s_ddbh.Text == "")
+            {
+                MessageBox.Show("请填写订单编号");
+                s_ddbh.Focus();
+            }
+            DataList list = new DataList();
+            list.s_ddbh = s_ddbh.Text;
+            list.s_kpzt = s_kpzt.Text;
+            list.s_fpbh = s_fpbh.Text;
+            list.s_kprq = s_kprq.Text;
+            list.s_skzt = s_skzt.Text;
+            list.s_kddh = s_kddh.Text;
+            list.s_sksj = s_sksj.Text;
+            list.s_kdfy = s_kdfy.Text;
+            list.s_sjxx = s_sjxx.Text;
+            list.s_user = MainFrom.USERID;
+            if (crud.addkp(list) == "success")
+            {
+                MessageBox.Show("订单" + list.s_ddbh + ",收款修改成功！");
+
 
                 DataTable dt = crud.czSK(s_ddbh.Text);
                 s_kpzt.Text = dt.Rows[0]["kpzt"].ToString();
@@ -196,6 +330,77 @@ namespace MPtest
 
                 s_kdfy.Text = dt.Rows[0]["kdfy"].ToString();
                 s_sjxx.Text = dt.Rows[0]["sjxi"].ToString();
+
+
+                databind();
+            }
+
+        }
+        //修改下单
+        private void alter_Click(object sender, EventArgs e)
+        {
+            if (s_ddbh.Text == "")
+            {
+                MessageBox.Show("请填写订单编号");
+                s_ddbh.Focus();
+            }
+
+            DataList list = new DataList();
+            list.s_ddbh = s_ddbh.Text;
+            list.s_cpmc = s_cpmc.Text;
+            list.s_khmc = s_khmc.Text;
+            list.s_ghgs = s_ghgs.Text;
+            list.s_cgry = s_cgry.Text;
+            list.s_xdri = s_xdri.Text;
+            list.s_xqsj = s_xqsj.Text;
+            list.s_cplx = s_cplx.Text;
+            list.s_ggxh = s_ggxh.Text;
+
+
+            list.s_cwlx = s_cwlx.Text;
+            list.s_suil = s_suil.Text;
+            list.s_cplh = s_cplh.Text;
+            list.s_cwlx = s_cwlx.Text;
+            list.s_danw = s_danw.Text;
+            list.s_heth = s_heth.Text;
+
+            list.s_shul = s_shul.Text;
+            list.s_danj = s_danj.Text;
+            list.s_zongj = s_zongj.Text;
+            list.s_cpmc = s_cpmc.Text;
+            list.s_cpms = s_cpms.Text;
+            list.s_beiz = s_bz.Text;
+            list.s_user = MainFrom.USERID;
+            if (crud.xgxd(list) == "success")
+            {
+                MessageBox.Show("订单" + list.s_ddbh + ",修改下单成功！");
+                databind();
+            }
+        }
+        //供货公司按回车
+        private void s_ghgs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (s_ghgs.Text == "")
+                {
+                    MessageBox.Show("供货公司不能为空");
+                    return;
+                }
+                s_cgry.Focus();
+            }
+        }
+        //采购
+        private void s_cgry_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (s_cgry.Text == "")
+                {
+                    MessageBox.Show("采购人员不能为空");
+                    return;
+                }
+                s_ghgs.Focus();
             }
         }
     }

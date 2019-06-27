@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.s_17 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.s_5 = new System.Windows.Forms.Label();
+            this.s_8 = new System.Windows.Forms.Label();
+            this.s_19 = new System.Windows.Forms.Label();
+            this.s_9 = new System.Windows.Forms.Label();
+            this.s_10 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.s_6 = new System.Windows.Forms.Label();
+            this.s_7 = new System.Windows.Forms.Label();
+            this.s_16 = new System.Windows.Forms.Label();
+            this.s_13 = new System.Windows.Forms.Label();
+            this.s_12 = new System.Windows.Forms.Label();
+            this.s_15 = new System.Windows.Forms.Label();
+            this.s_11 = new System.Windows.Forms.Label();
+            this.s_14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.alter = new System.Windows.Forms.Button();
             this.addBT = new System.Windows.Forms.Button();
@@ -68,10 +68,11 @@
             this.s_shul = new System.Windows.Forms.TextBox();
             this.s_danj = new System.Windows.Forms.TextBox();
             this.s_zongj = new System.Windows.Forms.TextBox();
-            this.s_ddbh = new System.Windows.Forms.TextBox();
             this.s_ghgs = new System.Windows.Forms.TextBox();
             this.s_khmc = new System.Windows.Forms.TextBox();
+            this.s_ddbh = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.x_add = new System.Windows.Forms.Button();
             this.s_kprq = new System.Windows.Forms.TextBox();
             this.s_skzt = new System.Windows.Forms.TextBox();
             this.s_kddh = new System.Windows.Forms.TextBox();
@@ -105,14 +106,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "客户名称";
             // 
-            // label2
+            // s_17
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "备注";
+            this.s_17.AutoSize = true;
+            this.s_17.Location = new System.Drawing.Point(6, 190);
+            this.s_17.Name = "s_17";
+            this.s_17.Size = new System.Drawing.Size(37, 15);
+            this.s_17.TabIndex = 1;
+            this.s_17.Text = "备注";
             // 
             // label3
             // 
@@ -132,50 +133,50 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "交货日期";
             // 
-            // label5
+            // s_5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(443, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "产品类型";
+            this.s_5.AutoSize = true;
+            this.s_5.Location = new System.Drawing.Point(443, 35);
+            this.s_5.Name = "s_5";
+            this.s_5.Size = new System.Drawing.Size(67, 15);
+            this.s_5.TabIndex = 4;
+            this.s_5.Text = "产品类型";
             // 
-            // label6
+            // s_8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(659, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "税率";
+            this.s_8.AutoSize = true;
+            this.s_8.Location = new System.Drawing.Point(659, 35);
+            this.s_8.Name = "s_8";
+            this.s_8.Size = new System.Drawing.Size(37, 15);
+            this.s_8.TabIndex = 5;
+            this.s_8.Text = "税率";
             // 
-            // label7
+            // s_19
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(443, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 15);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "产品描述";
+            this.s_19.AutoSize = true;
+            this.s_19.Location = new System.Drawing.Point(443, 190);
+            this.s_19.Name = "s_19";
+            this.s_19.Size = new System.Drawing.Size(67, 15);
+            this.s_19.TabIndex = 6;
+            this.s_19.Text = "产品描述";
             // 
-            // label8
+            // s_9
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(659, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 15);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "产品料号";
+            this.s_9.AutoSize = true;
+            this.s_9.Location = new System.Drawing.Point(659, 83);
+            this.s_9.Name = "s_9";
+            this.s_9.Size = new System.Drawing.Size(67, 15);
+            this.s_9.TabIndex = 7;
+            this.s_9.Text = "产品料号";
             // 
-            // label9
+            // s_10
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(659, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "财务类型";
+            this.s_10.AutoSize = true;
+            this.s_10.Location = new System.Drawing.Point(659, 130);
+            this.s_10.Name = "s_10";
+            this.s_10.Size = new System.Drawing.Size(67, 15);
+            this.s_10.TabIndex = 8;
+            this.s_10.Text = "财务类型";
             // 
             // label10
             // 
@@ -204,77 +205,77 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "采购人员";
             // 
-            // label13
+            // s_6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(443, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 15);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "产品名称";
+            this.s_6.AutoSize = true;
+            this.s_6.Location = new System.Drawing.Point(443, 83);
+            this.s_6.Name = "s_6";
+            this.s_6.Size = new System.Drawing.Size(67, 15);
+            this.s_6.TabIndex = 12;
+            this.s_6.Text = "产品名称";
             // 
-            // label14
+            // s_7
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(443, 130);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 15);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "规格型号";
+            this.s_7.AutoSize = true;
+            this.s_7.Location = new System.Drawing.Point(443, 130);
+            this.s_7.Name = "s_7";
+            this.s_7.Size = new System.Drawing.Size(67, 15);
+            this.s_7.TabIndex = 13;
+            this.s_7.Text = "规格型号";
             // 
-            // label15
+            // s_16
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1090, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 15);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "总价";
+            this.s_16.AutoSize = true;
+            this.s_16.Location = new System.Drawing.Point(1090, 130);
+            this.s_16.Name = "s_16";
+            this.s_16.Size = new System.Drawing.Size(37, 15);
+            this.s_16.TabIndex = 14;
+            this.s_16.Text = "总价";
             // 
-            // label16
+            // s_13
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(845, 130);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 15);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "合同原件";
+            this.s_13.AutoSize = true;
+            this.s_13.Location = new System.Drawing.Point(845, 130);
+            this.s_13.Name = "s_13";
+            this.s_13.Size = new System.Drawing.Size(67, 15);
+            this.s_13.TabIndex = 15;
+            this.s_13.Text = "合同原件";
             // 
-            // label17
+            // s_12
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(845, 83);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 15);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "合同号";
+            this.s_12.AutoSize = true;
+            this.s_12.Location = new System.Drawing.Point(845, 83);
+            this.s_12.Name = "s_12";
+            this.s_12.Size = new System.Drawing.Size(52, 15);
+            this.s_12.TabIndex = 16;
+            this.s_12.Text = "合同号";
             // 
-            // label18
+            // s_15
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1090, 83);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 15);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "单价";
+            this.s_15.AutoSize = true;
+            this.s_15.Location = new System.Drawing.Point(1090, 83);
+            this.s_15.Name = "s_15";
+            this.s_15.Size = new System.Drawing.Size(37, 15);
+            this.s_15.TabIndex = 17;
+            this.s_15.Text = "单价";
             // 
-            // label19
+            // s_11
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(845, 35);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 15);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "单位";
+            this.s_11.AutoSize = true;
+            this.s_11.Location = new System.Drawing.Point(845, 35);
+            this.s_11.Name = "s_11";
+            this.s_11.Size = new System.Drawing.Size(37, 15);
+            this.s_11.TabIndex = 18;
+            this.s_11.Text = "单位";
             // 
-            // label20
+            // s_14
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(1090, 35);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 15);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "数量";
+            this.s_14.AutoSize = true;
+            this.s_14.Location = new System.Drawing.Point(1090, 35);
+            this.s_14.Name = "s_14";
+            this.s_14.Size = new System.Drawing.Size(37, 15);
+            this.s_14.TabIndex = 19;
+            this.s_14.Text = "数量";
             // 
             // groupBox1
             // 
@@ -300,25 +301,25 @@
             this.groupBox1.Controls.Add(this.s_ghgs);
             this.groupBox1.Controls.Add(this.s_khmc);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.s_15);
+            this.groupBox1.Controls.Add(this.s_14);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.s_11);
+            this.groupBox1.Controls.Add(this.s_13);
+            this.groupBox1.Controls.Add(this.s_12);
+            this.groupBox1.Controls.Add(this.s_17);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.s_16);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(21, 25);
+            this.groupBox1.Controls.Add(this.s_10);
+            this.groupBox1.Controls.Add(this.s_7);
+            this.groupBox1.Controls.Add(this.s_9);
+            this.groupBox1.Controls.Add(this.s_5);
+            this.groupBox1.Controls.Add(this.s_8);
+            this.groupBox1.Controls.Add(this.s_19);
+            this.groupBox1.Controls.Add(this.s_6);
+            this.groupBox1.Location = new System.Drawing.Point(13, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1549, 251);
             this.groupBox1.TabIndex = 20;
@@ -333,6 +334,7 @@
             this.alter.TabIndex = 41;
             this.alter.Text = "修改";
             this.alter.UseVisualStyleBackColor = true;
+            this.alter.Click += new System.EventHandler(this.alter_Click);
             // 
             // addBT
             // 
@@ -349,145 +351,164 @@
             this.s_cpms.Location = new System.Drawing.Point(531, 190);
             this.s_cpms.Name = "s_cpms";
             this.s_cpms.Size = new System.Drawing.Size(308, 25);
-            this.s_cpms.TabIndex = 39;
+            this.s_cpms.TabIndex = 19;
+            this.s_cpms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_cgry
             // 
             this.s_cgry.Location = new System.Drawing.Point(317, 35);
             this.s_cgry.Name = "s_cgry";
             this.s_cgry.Size = new System.Drawing.Size(100, 25);
-            this.s_cgry.TabIndex = 38;
+            this.s_cgry.TabIndex = 3;
+            this.s_cgry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_xdri
             // 
             this.s_xdri.Location = new System.Drawing.Point(317, 83);
             this.s_xdri.Name = "s_xdri";
             this.s_xdri.Size = new System.Drawing.Size(100, 25);
-            this.s_xdri.TabIndex = 37;
+            this.s_xdri.TabIndex = 4;
+            this.s_xdri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_xqsj
             // 
             this.s_xqsj.Location = new System.Drawing.Point(317, 130);
             this.s_xqsj.Name = "s_xqsj";
             this.s_xqsj.Size = new System.Drawing.Size(100, 25);
-            this.s_xqsj.TabIndex = 36;
+            this.s_xqsj.TabIndex = 5;
+            this.s_xqsj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_cplx
             // 
             this.s_cplx.Location = new System.Drawing.Point(531, 35);
             this.s_cplx.Name = "s_cplx";
             this.s_cplx.Size = new System.Drawing.Size(100, 25);
-            this.s_cplx.TabIndex = 35;
+            this.s_cplx.TabIndex = 6;
+            this.s_cplx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_cpmc
             // 
             this.s_cpmc.Location = new System.Drawing.Point(531, 83);
             this.s_cpmc.Name = "s_cpmc";
             this.s_cpmc.Size = new System.Drawing.Size(100, 25);
-            this.s_cpmc.TabIndex = 34;
+            this.s_cpmc.TabIndex = 7;
+            this.s_cpmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_ggxh
             // 
             this.s_ggxh.Location = new System.Drawing.Point(531, 131);
             this.s_ggxh.Name = "s_ggxh";
             this.s_ggxh.Size = new System.Drawing.Size(100, 25);
-            this.s_ggxh.TabIndex = 33;
+            this.s_ggxh.TabIndex = 8;
+            this.s_ggxh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_bz
             // 
             this.s_bz.Location = new System.Drawing.Point(92, 190);
             this.s_bz.Name = "s_bz";
             this.s_bz.Size = new System.Drawing.Size(325, 25);
-            this.s_bz.TabIndex = 32;
+            this.s_bz.TabIndex = 18;
+            this.s_bz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_suil
             // 
             this.s_suil.Location = new System.Drawing.Point(739, 35);
             this.s_suil.Name = "s_suil";
             this.s_suil.Size = new System.Drawing.Size(100, 25);
-            this.s_suil.TabIndex = 31;
+            this.s_suil.TabIndex = 9;
+            this.s_suil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_cplh
             // 
             this.s_cplh.Location = new System.Drawing.Point(739, 80);
             this.s_cplh.Name = "s_cplh";
             this.s_cplh.Size = new System.Drawing.Size(100, 25);
-            this.s_cplh.TabIndex = 30;
+            this.s_cplh.TabIndex = 10;
+            this.s_cplh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_cwlx
             // 
             this.s_cwlx.Location = new System.Drawing.Point(739, 131);
             this.s_cwlx.Name = "s_cwlx";
             this.s_cwlx.Size = new System.Drawing.Size(100, 25);
-            this.s_cwlx.TabIndex = 29;
+            this.s_cwlx.TabIndex = 11;
+            this.s_cwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_danw
             // 
             this.s_danw.Location = new System.Drawing.Point(946, 32);
             this.s_danw.Name = "s_danw";
             this.s_danw.Size = new System.Drawing.Size(100, 25);
-            this.s_danw.TabIndex = 28;
+            this.s_danw.TabIndex = 12;
+            this.s_danw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_heth
             // 
             this.s_heth.Location = new System.Drawing.Point(946, 80);
             this.s_heth.Name = "s_heth";
             this.s_heth.Size = new System.Drawing.Size(100, 25);
-            this.s_heth.TabIndex = 27;
+            this.s_heth.TabIndex = 13;
+            this.s_heth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_htyj
             // 
             this.s_htyj.Location = new System.Drawing.Point(946, 127);
             this.s_htyj.Name = "s_htyj";
             this.s_htyj.Size = new System.Drawing.Size(100, 25);
-            this.s_htyj.TabIndex = 26;
+            this.s_htyj.TabIndex = 14;
+            this.s_htyj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_shul
             // 
             this.s_shul.Location = new System.Drawing.Point(1183, 32);
             this.s_shul.Name = "s_shul";
             this.s_shul.Size = new System.Drawing.Size(100, 25);
-            this.s_shul.TabIndex = 25;
+            this.s_shul.TabIndex = 15;
+            this.s_shul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_danj
             // 
             this.s_danj.Location = new System.Drawing.Point(1183, 80);
             this.s_danj.Name = "s_danj";
             this.s_danj.Size = new System.Drawing.Size(100, 25);
-            this.s_danj.TabIndex = 24;
+            this.s_danj.TabIndex = 16;
+            this.s_danj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_zongj
             // 
             this.s_zongj.Location = new System.Drawing.Point(1183, 127);
             this.s_zongj.Name = "s_zongj";
             this.s_zongj.Size = new System.Drawing.Size(100, 25);
-            this.s_zongj.TabIndex = 23;
-            // 
-            // s_ddbh
-            // 
-            this.s_ddbh.Location = new System.Drawing.Point(83, 32);
-            this.s_ddbh.Name = "s_ddbh";
-            this.s_ddbh.Size = new System.Drawing.Size(100, 25);
-            this.s_ddbh.TabIndex = 22;
-            this.s_ddbh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_ddbh_KeyDown);
+            this.s_zongj.TabIndex = 17;
+            this.s_zongj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_ghgs
             // 
             this.s_ghgs.Location = new System.Drawing.Point(92, 83);
             this.s_ghgs.Name = "s_ghgs";
             this.s_ghgs.Size = new System.Drawing.Size(100, 25);
-            this.s_ghgs.TabIndex = 21;
+            this.s_ghgs.TabIndex = 1;
+            this.s_ghgs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_khmc
             // 
             this.s_khmc.Location = new System.Drawing.Point(92, 35);
             this.s_khmc.Name = "s_khmc";
             this.s_khmc.Size = new System.Drawing.Size(100, 25);
-            this.s_khmc.TabIndex = 20;
+            this.s_khmc.TabIndex = 0;
             this.s_khmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_ddbh
+            // 
+            this.s_ddbh.Location = new System.Drawing.Point(75, 41);
+            this.s_ddbh.Name = "s_ddbh";
+            this.s_ddbh.Size = new System.Drawing.Size(100, 25);
+            this.s_ddbh.TabIndex = 22;
+            this.s_ddbh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_ddbh_KeyDown);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.x_add);
             this.groupBox2.Controls.Add(this.s_kprq);
             this.groupBox2.Controls.Add(this.s_skzt);
             this.groupBox2.Controls.Add(this.s_kddh);
@@ -514,6 +535,16 @@
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "收款";
+            // 
+            // x_add
+            // 
+            this.x_add.Location = new System.Drawing.Point(75, 86);
+            this.x_add.Name = "x_add";
+            this.x_add.Size = new System.Drawing.Size(75, 23);
+            this.x_add.TabIndex = 39;
+            this.x_add.Text = "修改";
+            this.x_add.UseVisualStyleBackColor = true;
+            this.x_add.Click += new System.EventHandler(this.x_add_Click);
             // 
             // s_kprq
             // 
@@ -694,25 +725,25 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label s_17;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label s_5;
+        private System.Windows.Forms.Label s_8;
+        private System.Windows.Forms.Label s_19;
+        private System.Windows.Forms.Label s_9;
+        private System.Windows.Forms.Label s_10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label s_6;
+        private System.Windows.Forms.Label s_7;
+        private System.Windows.Forms.Label s_16;
+        private System.Windows.Forms.Label s_13;
+        private System.Windows.Forms.Label s_12;
+        private System.Windows.Forms.Label s_15;
+        private System.Windows.Forms.Label s_11;
+        private System.Windows.Forms.Label s_14;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox s_cpms;
         private System.Windows.Forms.TextBox s_cgry;
@@ -756,5 +787,6 @@
         private System.Windows.Forms.DataGridView grd;
         private System.Windows.Forms.Button alter;
         private System.Windows.Forms.Button addBT;
+        private System.Windows.Forms.Button x_add;
     }
 }

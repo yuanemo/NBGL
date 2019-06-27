@@ -456,6 +456,7 @@ namespace MPtest
             return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
         }
 
+        //sale界面,添加
         public string Addsale(DataList list)
         {
             string result = "";
@@ -478,13 +479,80 @@ namespace MPtest
             }
         }
 
-
+        //查找收款
         public DataTable czSK(string Z)
         {
             string sql =
                          "SELECT * FROM hljd.flow_sale where lotid ='"+Z+"'";
             DataTable dt;
             return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
+
+        //sale界面,收款修改
+        public string addkp(DataList list)
+        {
+            string result = "";
+            string sql = "UPDATE hljd.flow_sale"+ 
+                            " SET kpzt = '"+list.s_kpzt+"',"+
+                            "kprq = '"+list.s_kprq+"',"+
+                            "kpbh = '"+list.s_fpbh+"',"+
+                            "fpkddh = '"+list.s_kddh+"',"+
+                            "sjxi = '"+list.s_sjxx+"',"+
+                            "kdfy = '"+list.s_kdfy+"',"+
+                            "skzt = '"+list.s_skzt+"',"+
+                            "sksj = '"+list.s_sksj+"',"+
+                            "user = '"+list.s_user+"'"+
+                            "WHERE lotid = '"+list.s_ddbh+"'";
+
+            MysqlHelp.ExecuteNonquery(MysqlHelp.MySqlconn, sql, ref result);
+            if (result.StartsWith("Success") == true)
+            {
+                return "success";
+            }
+            else
+            {
+                return "fail";
+            }
+        }
+
+        //下单修改
+        public string xgxd(DataList list)
+        {
+            string result = "";
+            string sql = "UPDATE hljd.flow_sale"+ 
+                          " SET "+
+                            "kehu='"+list.keh+"' ," +
+                            "cgry='"+list.s_cgry+"'," +
+                            "cplx='"+list.s_cplx+"'," +
+                            "cpmc='"+list.s_cpmc+"'," +
+                            "ggxh='"+list.s_ggxh+"'," +
+                            //"ytms='"+list.s_y+"'," +
+                            "cplh='"+list.s_cplh+"'," +
+                            "cwlx='"+list.s_cwlx+"'," +
+                            "danw='"+list.s_danw+"'," +
+                            "shul='"+list.s_shul+"'," +
+                             "danj='"+list.s_danj+"'," +
+                             "zongj='"+list.s_zongj+"'," +
+                             "xdrq='"+list.s_xdri+"'," +
+                             "jhrq='"+list.s_xqsj+"'," +
+                             "suil='"+list.s_suil+"'," +
+                             "ghgs='"+list.s_ghgs+"'," +
+                             "hth='"+list.s_heth+"'," +
+                             //"htlj='"+list.htlj+"'," +
+                             "beiz='"+list.s_beiz+"'," +
+                             "cpms='"+list.s_cpms+"'," +
+                             "user='"+list.s_user+"'" +
+                            "WHERE lotid = '"+list.s_ddbh+"'";
+
+            MysqlHelp.ExecuteNonquery(MysqlHelp.MySqlconn, sql, ref result);
+            if (result.StartsWith("Success") == true)
+            {
+                return "success";
+            }
+            else
+            {
+                return "fail";
+            }
         }
 
     }

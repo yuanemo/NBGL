@@ -156,6 +156,9 @@
     <Compile Include="wlbm.Designer.cs">
       <DependentUpon>wlbm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fahuo.resx">
+      <DependentUpon>fahuo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>

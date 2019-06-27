@@ -82,3 +82,4 @@ E:\www\NBGL\NBGL_L6\MPtest\obj\Debug\MPtest.application
 E:\www\NBGL\NBGL_L6\MPtest\obj\Debug\MPtest.csproj.CopyComplete
 E:\www\NBGL\NBGL_L6\MPtest\obj\Debug\MPtest.exe
 E:\www\NBGL\NBGL_L6\MPtest\obj\Debug\MPtest.pdb
+E:\www\NBGL\NBGL_L6\MPtest\obj\Debug\MPtest.fahuo.resources
