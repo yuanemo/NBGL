@@ -52,42 +52,42 @@ namespace MPtest
         {
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex < 0) return;
-            s_khmc.Text = grd.Rows[e.RowIndex].Cells["kehu"].Value.ToString();
-            s_ghgs.Text = grd.Rows[e.RowIndex].Cells["ghgs"].Value.ToString();
-            s_ddbh.Text = grd.Rows[e.RowIndex].Cells["lotid"].Value.ToString();
-            s_cgry.Text = grd.Rows[e.RowIndex].Cells["cgry"].Value.ToString();
-            s_xdri.Text = grd.Rows[e.RowIndex].Cells["xdrq"].Value.ToString();
-            s_xqsj.Text = grd.Rows[e.RowIndex].Cells["jhrq"].Value.ToString();
-            s_cplh.Text = grd.Rows[e.RowIndex].Cells["cplh"].Value.ToString();
-            s_cpmc.Text = grd.Rows[e.RowIndex].Cells["cpmc"].Value.ToString();
-            s_suil.Text = grd.Rows[e.RowIndex].Cells["suil"].Value.ToString();
-            s_ggxh.Text = grd.Rows[e.RowIndex].Cells["ggxh"].Value.ToString();
+            s_khmc.Text = grd.Rows[e.RowIndex].Cells["客户"].Value.ToString();
+            s_ghgs.Text = grd.Rows[e.RowIndex].Cells["供货公司"].Value.ToString();
+            s_ddbh.Text = grd.Rows[e.RowIndex].Cells["订单编号"].Value.ToString();
+            s_cgry.Text = grd.Rows[e.RowIndex].Cells["采购人员"].Value.ToString();
+            s_xdri.Text = grd.Rows[e.RowIndex].Cells["下单日期"].Value.ToString();
+            s_xqsj.Text = grd.Rows[e.RowIndex].Cells["交货日期"].Value.ToString();
+            s_cplh.Text = grd.Rows[e.RowIndex].Cells["产品料号"].Value.ToString();
+            s_cpmc.Text = grd.Rows[e.RowIndex].Cells["产品名称"].Value.ToString();
+            s_suil.Text = grd.Rows[e.RowIndex].Cells["税率"].Value.ToString();
+            s_ggxh.Text = grd.Rows[e.RowIndex].Cells["规格型号"].Value.ToString();
             //增加产品族 add by lei.xue on 2017-7-30
-            s_cplx.Text = grd.Rows[e.RowIndex].Cells["cplx"].Value.ToString();
+            s_cplx.Text = grd.Rows[e.RowIndex].Cells["产品类型"].Value.ToString();
             //2019.05.20
-            s_cwlx.Text = grd.Rows[e.RowIndex].Cells["cwlx"].Value.ToString();
-            s_danw.Text = grd.Rows[e.RowIndex].Cells["danw"].Value.ToString();
+            s_cwlx.Text = grd.Rows[e.RowIndex].Cells["财务类型"].Value.ToString();
+            s_danw.Text = grd.Rows[e.RowIndex].Cells["单位"].Value.ToString();
 
-            s_heth.Text = grd.Rows[e.RowIndex].Cells["hth"].Value.ToString();
-            s_shul.Text = grd.Rows[e.RowIndex].Cells["shul"].Value.ToString();
-            s_danj.Text = grd.Rows[e.RowIndex].Cells["danj"].Value.ToString();
-            s_zongj.Text = grd.Rows[e.RowIndex].Cells["zongj"].Value.ToString();
+            s_heth.Text = grd.Rows[e.RowIndex].Cells["合同号"].Value.ToString();
+            s_shul.Text = grd.Rows[e.RowIndex].Cells["数量"].Value.ToString();
+            s_danj.Text = grd.Rows[e.RowIndex].Cells["单价"].Value.ToString();
+            s_zongj.Text = grd.Rows[e.RowIndex].Cells["总价"].Value.ToString();
 
-            s_bz.Text = grd.Rows[e.RowIndex].Cells["beiz"].Value.ToString();
-            s_cpms.Text = grd.Rows[e.RowIndex].Cells["cpms"].Value.ToString();
+            s_bz.Text = grd.Rows[e.RowIndex].Cells["备注"].Value.ToString();
+            s_cpms.Text = grd.Rows[e.RowIndex].Cells["产品描述"].Value.ToString();
 
 
-            s_kpzt.Text = grd.Rows[e.RowIndex].Cells["kpzt"].Value.ToString();
-            s_fpbh.Text = grd.Rows[e.RowIndex].Cells["kpbh"].Value.ToString();
+            s_kpzt.Text = grd.Rows[e.RowIndex].Cells["开票状态"].Value.ToString();
+            s_fpbh.Text = grd.Rows[e.RowIndex].Cells["开票编号"].Value.ToString();
 
-            s_kprq.Text = grd.Rows[e.RowIndex].Cells["kprq"].Value.ToString();
-            s_skzt.Text = grd.Rows[e.RowIndex].Cells["skzt"].Value.ToString();
+            s_kprq.Text = grd.Rows[e.RowIndex].Cells["开票日期"].Value.ToString();
+            s_skzt.Text = grd.Rows[e.RowIndex].Cells["收款状态"].Value.ToString();
 
-            s_kddh.Text = grd.Rows[e.RowIndex].Cells["fpkddh"].Value.ToString();
-            s_sksj.Text = grd.Rows[e.RowIndex].Cells["sksj"].Value.ToString();
+            s_kddh.Text = grd.Rows[e.RowIndex].Cells["快递单号"].Value.ToString();
+            s_sksj.Text = grd.Rows[e.RowIndex].Cells["收款时间"].Value.ToString();
 
-            s_kdfy.Text = grd.Rows[e.RowIndex].Cells["kdfy"].Value.ToString();
-            s_sjxx.Text = grd.Rows[e.RowIndex].Cells["sjxi"].Value.ToString();
+            s_kdfy.Text = grd.Rows[e.RowIndex].Cells["快递费用"].Value.ToString();
+            s_sjxx.Text = grd.Rows[e.RowIndex].Cells["收件信息"].Value.ToString();
         }
 
         //客户按回车
@@ -403,5 +403,71 @@ namespace MPtest
                 s_ghgs.Focus();
             }
         }
+
+        private void qkwbk_Click(object sender, EventArgs e)
+        {
+              s_khmc.Text= "";
+              s_ghgs.Text= "";
+              //s_ddbh.Text == "" ;
+              s_cgry.Text= "";
+              s_xdri.Text= "";
+              s_xqsj.Text= "";
+              s_xqsj.Text= "";
+              s_cplx.Text= "";
+              s_cpmc.Text= "";
+              s_ggxh.Text= "";
+              s_suil.Text= "";
+
+              s_cplh.Text= "";
+              s_cwlx.Text= "";
+              s_danw.Text= "";
+              s_heth.Text= "";
+
+              s_shul.Text= "0";
+              s_danj.Text= "0";
+              s_zongj.Text= "";
+            s_bz.Text = "";
+            s_cpms.Text = "";
+        }
+
+        private void s_danj_TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(s_danj.Text.ToString(), out double s) == false)
+            {
+                if (s_danj.Text != "")
+                {
+                    MessageBox.Show("单价格式不正确");
+                    s_danj.Text = "0";
+                    return;
+                }
+                else
+                {
+                    return;
+                }                 
+                s_danj.Text = "0";
+            }
+            s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
+        }
+
+        private void s_shul_TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(s_shul.Text.ToString(), out double s)==false)
+                {
+                if (s_shul.Text != "")
+                {
+                    MessageBox.Show("数量格式不正确");
+                    s_shul.Text = "0";
+                    return;
+                }
+                else
+                {
+                    return;
+                }                   
+                s_danj.Text = "0";
+            }
+            if(s_danj.Text != "")
+            s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
+        }
+
     }
 }

@@ -48,17 +48,17 @@ namespace MPtest
             if (e.RowIndex < 0) return;
             if (e.ColumnIndex < 0) return;
 
-            txtlhid.Text = grd.Rows[e.RowIndex].Cells["lhid"].Value.ToString();
-            txtkh.Text = grd.Rows[e.RowIndex].Cells["keh"].Value.ToString();
-            txtlhlx.Text = grd.Rows[e.RowIndex].Cells["lhlx"].Value.ToString();
-            txtlhdm.Text = grd.Rows[e.RowIndex].Cells["lhdm"].Value.ToString();
-            txtcpmc.Text = grd.Rows[e.RowIndex].Cells["cpmc"].Value.ToString();
-            txtgg.Text = grd.Rows[e.RowIndex].Cells["guig"].Value.ToString();
-            txtcwlx.Text = grd.Rows[e.RowIndex].Cells["cwlx"].Value.ToString();
-            txtms.Text = grd.Rows[e.RowIndex].Cells["miaos"].Value.ToString();
-            txtytms.Text = grd.Rows[e.RowIndex].Cells["ytms"].Value.ToString();
-            txtpx.Text = grd.Rows[e.RowIndex].Cells["paix"].Value.ToString();
-            if (grd.Rows[e.RowIndex].Cells["flag"].Value.ToString() == "Y")
+            txtlhid.Text = grd.Rows[e.RowIndex].Cells["料号ID"].Value.ToString();
+            txtkh.Text = grd.Rows[e.RowIndex].Cells["客户"].Value.ToString();
+            txtlhlx.Text = grd.Rows[e.RowIndex].Cells["料号类型"].Value.ToString();
+            txtlhdm.Text = grd.Rows[e.RowIndex].Cells["料号代码"].Value.ToString();
+            txtcpmc.Text = grd.Rows[e.RowIndex].Cells["产品名称"].Value.ToString();
+            txtgg.Text = grd.Rows[e.RowIndex].Cells["规格"].Value.ToString();
+            txtcwlx.Text = grd.Rows[e.RowIndex].Cells["财务类型"].Value.ToString();
+            txtms.Text = grd.Rows[e.RowIndex].Cells["描述"].Value.ToString();
+            txtytms.Text = grd.Rows[e.RowIndex].Cells["用途描述"].Value.ToString();
+            txtpx.Text = grd.Rows[e.RowIndex].Cells["排序"].Value.ToString();
+            if (grd.Rows[e.RowIndex].Cells["是否启用"].Value.ToString() == "Y")
             {
                 checkBox1.Checked = true;
             }
@@ -110,11 +110,42 @@ namespace MPtest
 
             if (crud.Addwlbm(list) == "success")
             {
-                MessageBox.Show("添加成功！");
+                MessageBox.Show(list.lhid+"添加成功！");
                 databind();
             }
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtlhid.Text == "")
+            {
+                MessageBox.Show("请填写料号ID");
+                txtlhid.Focus();
+            }
+            DataList list = new DataList();
+            list.lhid = txtlhid.Text;
+            list.keh = txtkh.Text;
+            list.lhlx = txtlhlx.Text;
+            list.lhdm = txtlhdm.Text;
+            list.cpmc = txtcpmc.Text;
+            list.guig = txtgg.Text;
+            list.cwlx = txtcwlx.Text;
+            list.miaos = txtms.Text;
+            list.ytms = txtytms.Text;
+            list.paix = txtpx.Text;
+            if (checkBox1.Checked)
+            {
+                list.flag = "Y";
+            }
+            else
+                list.flag = "N";
+            if (crud.xgwlbm(list) == "success")
+            {
+                MessageBox.Show(txtlhid.Text+"修改成功！");
+                databind();
+            }
+
+        }
     }
 }

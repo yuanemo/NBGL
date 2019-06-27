@@ -64,7 +64,7 @@
             this.grd.RowTemplate.Height = 27;
             this.grd.Size = new System.Drawing.Size(1409, 387);
             this.grd.TabIndex = 0;
-            this.grd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
+            this.grd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
             // 
             // label1
             // 
@@ -263,6 +263,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "修改";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // wlbm
             // 

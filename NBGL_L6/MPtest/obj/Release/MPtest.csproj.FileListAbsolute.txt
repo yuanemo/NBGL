@@ -59,7 +59,6 @@ E:\www\NBGL\NBGL_L6\MPtest\bin\Release\MPtest.exe.manifest
 E:\www\NBGL\NBGL_L6\MPtest\bin\Release\MPtest.application
 E:\www\NBGL\NBGL_L6\MPtest\bin\Release\MPtest.exe
 E:\www\NBGL\NBGL_L6\MPtest\bin\Release\MPtest.pdb
-E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.csprojAssemblyReference.cache
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.fahuo.resources
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.frmlogin.resources
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.LabelPrint.resources
@@ -78,3 +77,4 @@ E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.application
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.csproj.CopyComplete
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.exe
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.pdb
+E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.csprojAssemblyReference.cache

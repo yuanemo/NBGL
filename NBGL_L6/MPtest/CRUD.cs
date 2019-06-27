@@ -408,7 +408,7 @@ namespace MPtest
         public DataTable CZwlbm()
         {
             string sql =
-                         "SELECT * FROM hljd.df_material_basic";
+                         "SELECT lhid as 料号ID,keh AS 客户,lhlx AS 料号类型,lhdm AS 料号代码,ytms AS 用途描述,cpmc as 产品名称,guig as 规格,cwlx AS 财务类型,miaos AS 描述,paix AS 排序,flag AS 是否启用 FROM hljd.df_material_basic ORDER BY lhid DESC";
             DataTable dt;
             return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
         }
@@ -444,7 +444,11 @@ namespace MPtest
         public DataTable czsale()
         {
             string sql =
-                         "SELECT * FROM hljd.flow_sale";
+                         "SELECT lotid AS 订单编号,kehu AS 客户,cgry AS 采购人员,cplx as 产品类型,cpmc as 产品名称," +
+                         "ggxh AS 规格型号,cplh as 产品料号,cwlx AS 财务类型,danw AS 单位,shul as 数量,danj as 单价,"+
+                         "zongj as 总价,xdrq as 下单日期,jhrq AS 交货日期,suil AS 税率,ghgs AS 供货公司,hth AS 合同号,htlj AS 合同路径,beiz AS 备注,"+
+                         "cpms AS 产品描述,kpzt AS 开票状态,kprq as 开票日期,kpbh AS 开票编号,fpkddh AS 快递单号,sjxi AS 收件信息,kdfy as 快递费用,"+
+                         "skzt AS 收款状态,sksj AS 收款时间 FROM hljd.flow_sale ORDER BY lotid DESC";
             DataTable dt;
             return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
         }
@@ -555,5 +559,22 @@ namespace MPtest
             }
         }
 
+        public string xgwlbm(DataList list)
+        {
+            string result = "";
+            string sql = "UPDATE hljd.df_material_basic"+
+                        " SET keh = '"+list.keh+"', lhlx = '"+list.lhlx+"', lhdm = '"+list.lhdm+"', ytms = '"+list.ytms+"', cpmc = '"+list.cpmc+"', guig = '"+list.guig+"', cwlx = '"+list.cwlx+"', paix = '"+list.paix+"', miaos = '"+list.miaos+"', flag = '"+list.flag+"'"+
+                        " WHERE lhid = '"+list.lhid+"'";
+
+            MysqlHelp.ExecuteNonquery(MysqlHelp.MySqlconn, sql, ref result);
+            if (result.StartsWith("Success") == true)
+            {
+                return "success";
+            }
+            else
+            {
+                return "fail";
+            }
+        }
     }
 }
