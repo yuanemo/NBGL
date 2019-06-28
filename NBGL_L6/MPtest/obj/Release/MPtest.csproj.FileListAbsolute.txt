@@ -77,4 +77,3 @@ E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.application
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.csproj.CopyComplete
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.exe
 E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.pdb
-E:\www\NBGL\NBGL_L6\MPtest\obj\Release\MPtest.csprojAssemblyReference.cache
