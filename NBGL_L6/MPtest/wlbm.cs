@@ -144,7 +144,6 @@ namespace MPtest
             {
                 MessageBox.Show(txtlhid.Text+"修改成功！");
                 databind();
-                return;
             }
 
         }
