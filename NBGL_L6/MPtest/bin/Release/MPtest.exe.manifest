@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MPtest.exe" size="7983616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MPtest.exe" size="7985664">
       <assemblyIdentity name="MPtest" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5xBCkh8FFaQe5Jp0bJo0+H/hlgU=</dsig:DigestValue>
+        <dsig:DigestValue>ilmHWq6izL/U3n70sYyclb4opgM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

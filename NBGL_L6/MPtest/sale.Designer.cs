@@ -49,28 +49,25 @@
             this.s_11 = new System.Windows.Forms.Label();
             this.s_14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.s_ggxh = new System.Windows.Forms.ComboBox();
+            this.s_cpmc = new System.Windows.Forms.ComboBox();
+            this.s_suil = new System.Windows.Forms.ComboBox();
+            this.s_cplx = new System.Windows.Forms.ComboBox();
+            this.s_cgry = new System.Windows.Forms.ComboBox();
+            this.s_danw = new System.Windows.Forms.ComboBox();
+            this.s_khmc = new System.Windows.Forms.ComboBox();
+            this.s_ghgs = new System.Windows.Forms.ComboBox();
             this.qkwbk = new System.Windows.Forms.Button();
             this.alter = new System.Windows.Forms.Button();
             this.addBT = new System.Windows.Forms.Button();
             this.s_cpms = new System.Windows.Forms.TextBox();
-            this.s_cgry = new System.Windows.Forms.TextBox();
-            this.s_xdri = new System.Windows.Forms.TextBox();
-            this.s_xqsj = new System.Windows.Forms.TextBox();
-            this.s_cplx = new System.Windows.Forms.TextBox();
-            this.s_cpmc = new System.Windows.Forms.TextBox();
-            this.s_ggxh = new System.Windows.Forms.TextBox();
             this.s_bz = new System.Windows.Forms.TextBox();
-            this.s_suil = new System.Windows.Forms.TextBox();
             this.s_cplh = new System.Windows.Forms.TextBox();
-            this.s_cwlx = new System.Windows.Forms.TextBox();
-            this.s_danw = new System.Windows.Forms.TextBox();
             this.s_heth = new System.Windows.Forms.TextBox();
             this.s_htyj = new System.Windows.Forms.TextBox();
             this.s_shul = new System.Windows.Forms.TextBox();
             this.s_danj = new System.Windows.Forms.TextBox();
             this.s_zongj = new System.Windows.Forms.TextBox();
-            this.s_ghgs = new System.Windows.Forms.TextBox();
-            this.s_khmc = new System.Windows.Forms.TextBox();
             this.s_ddbh = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.x_add = new System.Windows.Forms.Button();
@@ -93,6 +90,9 @@
             this.sk_07 = new System.Windows.Forms.Label();
             this.sk_06 = new System.Windows.Forms.Label();
             this.grd = new System.Windows.Forms.DataGridView();
+            this.s_cwlx = new System.Windows.Forms.ComboBox();
+            this.s_xdri = new System.Windows.Forms.DateTimePicker();
+            this.s_xqsj = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
@@ -280,28 +280,28 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.s_xqsj);
+            this.groupBox1.Controls.Add(this.s_xdri);
+            this.groupBox1.Controls.Add(this.s_cwlx);
+            this.groupBox1.Controls.Add(this.s_ggxh);
+            this.groupBox1.Controls.Add(this.s_cpmc);
+            this.groupBox1.Controls.Add(this.s_suil);
+            this.groupBox1.Controls.Add(this.s_cplx);
+            this.groupBox1.Controls.Add(this.s_cgry);
+            this.groupBox1.Controls.Add(this.s_danw);
+            this.groupBox1.Controls.Add(this.s_khmc);
+            this.groupBox1.Controls.Add(this.s_ghgs);
             this.groupBox1.Controls.Add(this.qkwbk);
             this.groupBox1.Controls.Add(this.alter);
             this.groupBox1.Controls.Add(this.addBT);
             this.groupBox1.Controls.Add(this.s_cpms);
-            this.groupBox1.Controls.Add(this.s_cgry);
-            this.groupBox1.Controls.Add(this.s_xdri);
-            this.groupBox1.Controls.Add(this.s_xqsj);
-            this.groupBox1.Controls.Add(this.s_cplx);
-            this.groupBox1.Controls.Add(this.s_cpmc);
-            this.groupBox1.Controls.Add(this.s_ggxh);
             this.groupBox1.Controls.Add(this.s_bz);
-            this.groupBox1.Controls.Add(this.s_suil);
             this.groupBox1.Controls.Add(this.s_cplh);
-            this.groupBox1.Controls.Add(this.s_cwlx);
-            this.groupBox1.Controls.Add(this.s_danw);
             this.groupBox1.Controls.Add(this.s_heth);
             this.groupBox1.Controls.Add(this.s_htyj);
             this.groupBox1.Controls.Add(this.s_shul);
             this.groupBox1.Controls.Add(this.s_danj);
             this.groupBox1.Controls.Add(this.s_zongj);
-            this.groupBox1.Controls.Add(this.s_ghgs);
-            this.groupBox1.Controls.Add(this.s_khmc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.s_15);
             this.groupBox1.Controls.Add(this.s_14);
@@ -327,6 +327,78 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "客户下单";
+            // 
+            // s_ggxh
+            // 
+            this.s_ggxh.FormattingEnabled = true;
+            this.s_ggxh.Location = new System.Drawing.Point(531, 126);
+            this.s_ggxh.Name = "s_ggxh";
+            this.s_ggxh.Size = new System.Drawing.Size(121, 23);
+            this.s_ggxh.TabIndex = 8;
+            this.s_ggxh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_cpmc
+            // 
+            this.s_cpmc.FormattingEnabled = true;
+            this.s_cpmc.Location = new System.Drawing.Point(531, 80);
+            this.s_cpmc.Name = "s_cpmc";
+            this.s_cpmc.Size = new System.Drawing.Size(121, 23);
+            this.s_cpmc.TabIndex = 7;
+            this.s_cpmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_suil
+            // 
+            this.s_suil.FormattingEnabled = true;
+            this.s_suil.Location = new System.Drawing.Point(739, 32);
+            this.s_suil.Name = "s_suil";
+            this.s_suil.Size = new System.Drawing.Size(121, 23);
+            this.s_suil.TabIndex = 9;
+            this.s_suil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_cplx
+            // 
+            this.s_cplx.FormattingEnabled = true;
+            this.s_cplx.Location = new System.Drawing.Point(531, 34);
+            this.s_cplx.Name = "s_cplx";
+            this.s_cplx.Size = new System.Drawing.Size(121, 23);
+            this.s_cplx.TabIndex = 6;
+            this.s_cplx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_cgry
+            // 
+            this.s_cgry.FormattingEnabled = true;
+            this.s_cgry.Location = new System.Drawing.Point(316, 32);
+            this.s_cgry.Name = "s_cgry";
+            this.s_cgry.Size = new System.Drawing.Size(121, 23);
+            this.s_cgry.TabIndex = 3;
+            this.s_cgry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_danw
+            // 
+            this.s_danw.FormattingEnabled = true;
+            this.s_danw.Location = new System.Drawing.Point(946, 35);
+            this.s_danw.Name = "s_danw";
+            this.s_danw.Size = new System.Drawing.Size(121, 23);
+            this.s_danw.TabIndex = 12;
+            this.s_danw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_khmc
+            // 
+            this.s_khmc.FormattingEnabled = true;
+            this.s_khmc.Location = new System.Drawing.Point(79, 35);
+            this.s_khmc.Name = "s_khmc";
+            this.s_khmc.Size = new System.Drawing.Size(121, 23);
+            this.s_khmc.TabIndex = 0;
+            this.s_khmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_ghgs
+            // 
+            this.s_ghgs.FormattingEnabled = true;
+            this.s_ghgs.Location = new System.Drawing.Point(79, 80);
+            this.s_ghgs.Name = "s_ghgs";
+            this.s_ghgs.Size = new System.Drawing.Size(121, 23);
+            this.s_ghgs.TabIndex = 1;
+            this.s_ghgs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // qkwbk
             // 
@@ -366,54 +438,6 @@
             this.s_cpms.TabIndex = 19;
             this.s_cpms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
-            // s_cgry
-            // 
-            this.s_cgry.Location = new System.Drawing.Point(317, 35);
-            this.s_cgry.Name = "s_cgry";
-            this.s_cgry.Size = new System.Drawing.Size(100, 25);
-            this.s_cgry.TabIndex = 3;
-            this.s_cgry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_xdri
-            // 
-            this.s_xdri.Location = new System.Drawing.Point(317, 83);
-            this.s_xdri.Name = "s_xdri";
-            this.s_xdri.Size = new System.Drawing.Size(100, 25);
-            this.s_xdri.TabIndex = 4;
-            this.s_xdri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_xqsj
-            // 
-            this.s_xqsj.Location = new System.Drawing.Point(317, 130);
-            this.s_xqsj.Name = "s_xqsj";
-            this.s_xqsj.Size = new System.Drawing.Size(100, 25);
-            this.s_xqsj.TabIndex = 5;
-            this.s_xqsj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_cplx
-            // 
-            this.s_cplx.Location = new System.Drawing.Point(531, 35);
-            this.s_cplx.Name = "s_cplx";
-            this.s_cplx.Size = new System.Drawing.Size(100, 25);
-            this.s_cplx.TabIndex = 6;
-            this.s_cplx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_cpmc
-            // 
-            this.s_cpmc.Location = new System.Drawing.Point(531, 83);
-            this.s_cpmc.Name = "s_cpmc";
-            this.s_cpmc.Size = new System.Drawing.Size(100, 25);
-            this.s_cpmc.TabIndex = 7;
-            this.s_cpmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_ggxh
-            // 
-            this.s_ggxh.Location = new System.Drawing.Point(531, 131);
-            this.s_ggxh.Name = "s_ggxh";
-            this.s_ggxh.Size = new System.Drawing.Size(100, 25);
-            this.s_ggxh.TabIndex = 8;
-            this.s_ggxh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
             // s_bz
             // 
             this.s_bz.Location = new System.Drawing.Point(92, 190);
@@ -422,37 +446,13 @@
             this.s_bz.TabIndex = 18;
             this.s_bz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
-            // s_suil
-            // 
-            this.s_suil.Location = new System.Drawing.Point(739, 35);
-            this.s_suil.Name = "s_suil";
-            this.s_suil.Size = new System.Drawing.Size(100, 25);
-            this.s_suil.TabIndex = 9;
-            this.s_suil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
             // s_cplh
             // 
-            this.s_cplh.Location = new System.Drawing.Point(739, 80);
+            this.s_cplh.Location = new System.Drawing.Point(739, 76);
             this.s_cplh.Name = "s_cplh";
             this.s_cplh.Size = new System.Drawing.Size(100, 25);
             this.s_cplh.TabIndex = 10;
             this.s_cplh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_cwlx
-            // 
-            this.s_cwlx.Location = new System.Drawing.Point(739, 131);
-            this.s_cwlx.Name = "s_cwlx";
-            this.s_cwlx.Size = new System.Drawing.Size(100, 25);
-            this.s_cwlx.TabIndex = 11;
-            this.s_cwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_danw
-            // 
-            this.s_danw.Location = new System.Drawing.Point(946, 32);
-            this.s_danw.Name = "s_danw";
-            this.s_danw.Size = new System.Drawing.Size(100, 25);
-            this.s_danw.TabIndex = 12;
-            this.s_danw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_heth
             // 
@@ -495,22 +495,6 @@
             this.s_zongj.Size = new System.Drawing.Size(100, 25);
             this.s_zongj.TabIndex = 17;
             this.s_zongj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_ghgs
-            // 
-            this.s_ghgs.Location = new System.Drawing.Point(92, 83);
-            this.s_ghgs.Name = "s_ghgs";
-            this.s_ghgs.Size = new System.Drawing.Size(100, 25);
-            this.s_ghgs.TabIndex = 1;
-            this.s_ghgs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_khmc
-            // 
-            this.s_khmc.Location = new System.Drawing.Point(92, 35);
-            this.s_khmc.Name = "s_khmc";
-            this.s_khmc.Size = new System.Drawing.Size(100, 25);
-            this.s_khmc.TabIndex = 0;
-            this.s_khmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_ddbh
             // 
@@ -716,6 +700,31 @@
             this.grd.TabIndex = 22;
             this.grd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
             // 
+            // s_cwlx
+            // 
+            this.s_cwlx.FormattingEnabled = true;
+            this.s_cwlx.Location = new System.Drawing.Point(739, 129);
+            this.s_cwlx.Name = "s_cwlx";
+            this.s_cwlx.Size = new System.Drawing.Size(121, 23);
+            this.s_cwlx.TabIndex = 11;
+            this.s_cwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_xdri
+            // 
+            this.s_xdri.Location = new System.Drawing.Point(310, 83);
+            this.s_xdri.Name = "s_xdri";
+            this.s_xdri.Size = new System.Drawing.Size(137, 25);
+            this.s_xdri.TabIndex = 4;
+            this.s_xdri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_xqsj
+            // 
+            this.s_xqsj.Location = new System.Drawing.Point(310, 127);
+            this.s_xqsj.Name = "s_xqsj";
+            this.s_xqsj.Size = new System.Drawing.Size(137, 25);
+            this.s_xqsj.TabIndex = 5;
+            this.s_xqsj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
             // sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -727,6 +736,7 @@
             this.Name = "sale";
             this.Text = "sale";
             this.Load += new System.EventHandler(this.sale_Load);
+            this.Shown += new System.EventHandler(this.sale_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -760,25 +770,14 @@
         private System.Windows.Forms.Label s_14;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox s_cpms;
-        private System.Windows.Forms.TextBox s_cgry;
-        private System.Windows.Forms.TextBox s_xdri;
-        private System.Windows.Forms.TextBox s_xqsj;
-        private System.Windows.Forms.TextBox s_cplx;
-        private System.Windows.Forms.TextBox s_cpmc;
-        private System.Windows.Forms.TextBox s_ggxh;
         private System.Windows.Forms.TextBox s_bz;
-        private System.Windows.Forms.TextBox s_suil;
         private System.Windows.Forms.TextBox s_cplh;
-        private System.Windows.Forms.TextBox s_cwlx;
-        private System.Windows.Forms.TextBox s_danw;
         private System.Windows.Forms.TextBox s_heth;
         private System.Windows.Forms.TextBox s_htyj;
         private System.Windows.Forms.TextBox s_shul;
         private System.Windows.Forms.TextBox s_danj;
         private System.Windows.Forms.TextBox s_zongj;
         private System.Windows.Forms.TextBox s_ddbh;
-        private System.Windows.Forms.TextBox s_ghgs;
-        private System.Windows.Forms.TextBox s_khmc;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox s_kprq;
         private System.Windows.Forms.TextBox s_skzt;
@@ -803,5 +802,16 @@
         private System.Windows.Forms.Button addBT;
         private System.Windows.Forms.Button x_add;
         private System.Windows.Forms.Button qkwbk;
+        private System.Windows.Forms.ComboBox s_ghgs;
+        private System.Windows.Forms.ComboBox s_khmc;
+        private System.Windows.Forms.ComboBox s_danw;
+        private System.Windows.Forms.ComboBox s_cgry;
+        private System.Windows.Forms.ComboBox s_cplx;
+        private System.Windows.Forms.ComboBox s_suil;
+        private System.Windows.Forms.ComboBox s_ggxh;
+        private System.Windows.Forms.ComboBox s_cpmc;
+        private System.Windows.Forms.ComboBox s_cwlx;
+        private System.Windows.Forms.DateTimePicker s_xdri;
+        private System.Windows.Forms.DateTimePicker s_xqsj;
     }
 }

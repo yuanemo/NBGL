@@ -576,5 +576,44 @@ namespace MPtest
                 return "fail";
             }
         }
+
+        public DataTable xlk(string txt,string lx)
+        {
+            string sql =
+                    "SELECT PRIDISPLAYNAME FROM hljd.df_config_condition_linkage"+
+                        "WHERE PRIDISPLAYNAME LIKE '%"+txt+"%' AND family_remark = '"+lx+"' AND State = 'Y'"+
+                        "ORDER BY PRISEQUENCE";
+            DataTable dt;
+            return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
+
+        //查找全部下拉框
+        public DataTable qbxlk()
+        {
+            string sql =
+                    "SELECT * FROM hljd.df_config_condition_linkage" +
+                        " WHERE  State = 'Y'" ;
+            DataTable dt;
+            return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
+
+        //简单添加下拉框选项
+        public string Addxlk(string txtadd,string lx)
+        {
+            string result = "";
+            string sql = "INSERT INTO hljd.df_config_condition_linkage "+
+                        "(PRIDISPLAYNAME, family_remark, state)"+
+                        "VALUES('"+txtadd+"', '"+lx+"', 'Y')";
+
+            MysqlHelp.ExecuteNonquery(MysqlHelp.MySqlconn, sql, ref result);
+            if (result.StartsWith("Success") == true)
+            {
+                return "success";
+            }
+            else
+            {
+                return "fail";
+            }
+        }
     }
 }

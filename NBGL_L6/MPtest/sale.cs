@@ -40,7 +40,47 @@ namespace MPtest
 
 
             #endregion
+
+            xlkxs();
             databind();
+        }
+        //x下拉框显示
+        private void xlkxs()
+        {
+            //下拉框清空
+            s_khmc.Items.Clear();
+            s_ghgs.Items.Clear();
+            s_danw.Items.Clear();
+            s_cgry.Items.Clear();
+            s_cplx.Items.Clear();
+
+            s_suil.Items.Clear();
+            s_ggxh.Items.Clear();
+            s_cpmc.Items.Clear();
+            s_cwlx.Items.Clear();
+            //s_cplx.Items.Clear();
+            string xlk;
+            DataTable dt = crud.qbxlk();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                xlk = dt.Rows[i]["family_remark"].ToString();
+                switch (xlk)
+                {
+                    case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "生产公司": s_ghgs.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "单位": s_danw.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "采购人员": s_cgry.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "产品类型": s_cplx.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "税率": s_suil.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "产品名称": s_cpmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "规格型号": s_ggxh.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "财务类型": s_cwlx.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                        //case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                        //case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+
+                        //case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                }
+            }
         }
         private void databind()
         {
@@ -90,89 +130,410 @@ namespace MPtest
             s_sjxx.Text = grd.Rows[e.RowIndex].Cells["收件信息"].Value.ToString();
         }
 
-        //客户按回车
+        //
+        //控件按回车
         private void s_khmc_KeyDown(object sender, KeyEventArgs e)
-
         {
-            TextBox cb = (TextBox)sender;
-            string TT;
-            if (e.KeyCode == Keys.Enter)
+            if (sender is TextBox)
             {
-                switch (cb.TabIndex)
-                        {
-                            case 0 :
-                                TT = "客户名称";
-                                break;
-                            case 1:
-                                TT = label11.Text;
-                                break;
-                            case 2:
-                                TT = "";
-                                break;
-                            case 3:
-                                TT = label12.Text;
-                                break;
-                            case 4:
-                                TT = label3.Text;
-                                break;
-                            case 5:
-                                TT = label4.Text;
-                                break;
-                            case 6:
-                                TT = s_5.Text;
-                                break;
-                            case 7:
-                                TT = s_6.Text;
-                                break;
+                TextBox cb = (TextBox)sender;
+                string TT;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    switch (cb.TabIndex)
+                    {
+                        case 0:
+                            TT = "客户名称";
+                            break;
+                        case 1:
+                            TT = label11.Text;
+                            break;
+                        case 2:
+                            TT = "";
+                            break;
+                        case 3:
+                            TT = label12.Text;
+                            break;
+                        case 4:
+                            TT = label3.Text;
+                            break;
+                        case 5:
+                            TT = label4.Text;
+                            break;
+                        case 6:
+                            TT = s_5.Text;
+                            break;
+                        case 7:
+                            TT = s_6.Text;
+                            break;
 
-                            case 8:
-                                TT = s_7.Text;
+                        case 8:
+                            TT = s_7.Text;
+                            break;
+                        case 9:
+                            TT = s_8.Text;
+                            break;
+                        case 10:
+                            TT = s_9.Text;
+                            break;
+                        case 11:
+                            TT = s_10.Text;
+                            break;
+                        case 12:
+                            TT = s_11.Text;
+                            break;
+                        case 13:
+                            TT = s_12.Text;
+                            break;
+                        case 14:
+                            TT = s_13.Text;
+                            break;
+                        case 15:
+                            TT = s_14.Text;
+                            break;
+                        case 16:
+                            TT = s_15.Text;
+                            s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
+                            break;
+                        case 17:
+                            TT = s_16.Text;
+                            break;
+                        case 18:
+                            TT = s_17.Text;
+                            break;
+                        case 19:
+                            TT = s_19.Text;
+                            break;
+                        default:
+                            TT = "0";
+                            break;
+                    }
+
+                    if (cb.Text.Trim() == "")
+                    {
+                        MessageBox.Show("" + TT + "不能为空");
+                        return;
+                    }
+                    SendKeys.SendWait("{tab}");
+                }
+            }
+            else if (sender is DateTimePicker)
+            {
+                DateTimePicker cb = (DateTimePicker)sender;
+                string TT;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    switch (cb.TabIndex)
+                    {
+                        case 0:
+                            TT = "客户名称";
+                            break;
+                        case 1:
+                            TT = label11.Text;
+                            break;
+                        case 2:
+                            TT = "";
+                            break;
+                        case 3:
+                            TT = label12.Text;
+                            break;
+                        case 4:
+                            TT = label3.Text;
+                            break;
+                        case 5:
+                            TT = label4.Text;
+                            break;
+                        case 6:
+                            TT = s_5.Text;
+                            break;
+                        case 7:
+                            TT = s_6.Text;
+                            break;
+
+                        case 8:
+                            TT = s_7.Text;
+                            break;
+                        case 9:
+                            TT = s_8.Text;
+                            break;
+                        case 10:
+                            TT = s_9.Text;
+                            break;
+                        case 11:
+                            TT = s_10.Text;
+                            break;
+                        case 12:
+                            TT = s_11.Text;
+                            break;
+                        case 13:
+                            TT = s_12.Text;
+                            break;
+                        case 14:
+                            TT = s_13.Text;
+                            break;
+                        case 15:
+                            TT = s_14.Text;
+                            break;
+                        case 16:
+                            TT = s_15.Text;
+                            s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
+                            break;
+                        case 17:
+                            TT = s_16.Text;
+                            break;
+                        case 18:
+                            TT = s_17.Text;
+                            break;
+                        case 19:
+                            TT = s_19.Text;
+                            break;
+                        default:
+                            TT = "0";
+                            break;
+                    }
+
+                    if (cb.Text.Trim() == "")
+                    {
+                        MessageBox.Show("" + TT + "不能为空");
+                        return;
+                    }
+                    SendKeys.SendWait("{tab}");
+                }
+            }
+            else if (sender is ComboBox)
+            {
+                ComboBox cb = (ComboBox)sender;
+                string TT;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    switch (cb.TabIndex)
+                    {
+                        case 0:
+                            TT = "客户名称";
+                            break;
+                        case 1:
+                            TT = label11.Text;
+                            break;
+                        case 2:
+                            TT = "";
+                            break;
+                        case 3:
+                            TT = label12.Text;
+                            break;
+                        case 4:
+                            TT = label3.Text;
+                            break;
+                        case 5:
+                            TT = label4.Text;
+                            break;
+                        case 6:
+                            TT = s_5.Text;
+                            break;
+                        case 7:
+                            TT = s_6.Text;
+                            break;
+
+                        case 8:
+                            TT = s_7.Text;
+                            break;
+                        case 9:
+                            TT = s_8.Text;
+                            break;
+                        case 10:
+                            TT = s_9.Text;
+                            break;
+                        case 11:
+                            TT = s_10.Text;
+                            break;
+                        case 12:
+                            TT = s_11.Text;
+                            break;
+                        case 13:
+                            TT = s_12.Text;
+                            break;
+                        case 14:
+                            TT = s_13.Text;
+                            break;
+                        case 15:
+                            TT = s_14.Text;
+                            break;
+                        case 16:
+                            TT = s_15.Text;
+                            s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
+                            break;
+                        case 17:
+                            TT = s_16.Text;
+                            break;
+                        case 18:
+                            TT = s_17.Text;
+                            break;
+                        case 19:
+                            TT = s_19.Text;
+                            break;
+                        default:
+                            TT = "0";
+                            break;
+                    }
+
+                    if (cb.Text.Trim() == "")
+                    {
+                        MessageBox.Show("" + TT + "不能为空");
+                        return;
+                    }
+                    DataTable dt = crud.qbxlk();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        switch (TT)
+                        {
+                            case "客户名称":
+                                if (dt.Rows[i]["family_remark"].ToString() == "客户" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_khmc.Text)
+                                {
+
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_khmc.Text, "客户") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 9:
-                                TT = s_8.Text;
+                            case "供货公司":
+                                if (dt.Rows[i]["family_remark"].ToString() == "生产公司" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_ghgs.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_ghgs.Text, "生产公司") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 10:
-                                TT = s_9.Text;
+                            case "采购人员":
+                                if (dt.Rows[i]["family_remark"].ToString() == "采购人员" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_cgry.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_cgry.Text, "采购人员") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 11:
-                                TT = s_10.Text;
+                            case "单位":
+                                if (dt.Rows[i]["family_remark"].ToString() == "单位" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_danw.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_danw.Text, "单位") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 12:
-                                TT = s_11.Text;
+                            case "产品类型":
+                                if (dt.Rows[i]["family_remark"].ToString() == "产品类型" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_cplx.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_cplx.Text, "产品类型") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 13:
-                                TT = s_12.Text;
+                            case "税率":
+                                if (dt.Rows[i]["family_remark"].ToString() == "税率" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_suil.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_suil.Text, "税率") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 14:
-                                TT = s_13.Text;
+                            case "产品名称":
+                                if (dt.Rows[i]["family_remark"].ToString() == "产品名称" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_cpmc.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_cpmc.Text, "产品名称") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 15:
-                                TT = s_14.Text;
+                            case "规格型号":
+                                if (dt.Rows[i]["family_remark"].ToString() == "规格型号" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_ggxh.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_ggxh.Text, "规格型号") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
-                            case 16:
-                                TT = s_15.Text;
-                                s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString())* Convert.ToDouble(s_shul.Text.ToString())).ToString();
-                                break;
-                            case 17:
-                                TT = s_16.Text;
-                                break;
-                            case 18:
-                                TT = s_17.Text;
-                                break;
-                            case 19:
-                                TT = s_19.Text;
-                                break;
-                            default:
-                                TT="0";
+                            case "财务类型":
+                                if (dt.Rows[i]["family_remark"].ToString() == "财务类型" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_cwlx.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_cwlx.Text, "财务类型") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
                                 break;
                         }
 
-                if (cb.Text.Trim() == "")
-                {
-                    MessageBox.Show(""+TT+"不能为空");
-                    return;
+                    }
+                    SendKeys.SendWait("{tab}");
                 }
-                SendKeys.SendWait("{tab}");
             }
         }
         //添加下单
@@ -403,7 +764,7 @@ namespace MPtest
                 s_ghgs.Focus();
             }
         }
-
+        //清空
         private void qkwbk_Click(object sender, EventArgs e)
         {
               s_khmc.Text= "";
@@ -430,6 +791,7 @@ namespace MPtest
             s_cpms.Text = "";
         }
 
+        //单价数字改变
         private void s_danj_TextChanged(object sender, EventArgs e)
         {
             if (double.TryParse(s_danj.Text.ToString(), out double s) == false)
@@ -448,7 +810,7 @@ namespace MPtest
             }
             s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
         }
-
+        //数量数字改变
         private void s_shul_TextChanged(object sender, EventArgs e)
         {
             if (double.TryParse(s_shul.Text.ToString(), out double s)==false)
@@ -469,5 +831,9 @@ namespace MPtest
             s_zongj.Text = (Convert.ToDouble(s_danj.Text.ToString()) * Convert.ToDouble(s_shul.Text.ToString())).ToString();
         }
 
+        private void sale_Shown(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,18 +41,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtlhid = new System.Windows.Forms.TextBox();
-            this.txtcpmc = new System.Windows.Forms.TextBox();
-            this.txtlhdm = new System.Windows.Forms.TextBox();
-            this.txtlhlx = new System.Windows.Forms.TextBox();
-            this.txtkh = new System.Windows.Forms.TextBox();
             this.txtpx = new System.Windows.Forms.TextBox();
-            this.txtytms = new System.Windows.Forms.TextBox();
-            this.txtms = new System.Windows.Forms.TextBox();
-            this.txtcwlx = new System.Windows.Forms.TextBox();
-            this.txtgg = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtkh = new System.Windows.Forms.ComboBox();
+            this.txtlhlx = new System.Windows.Forms.ComboBox();
+            this.txtlhdm = new System.Windows.Forms.ComboBox();
+            this.txtcpmc = new System.Windows.Forms.ComboBox();
+            this.txtgg = new System.Windows.Forms.ComboBox();
+            this.txtcwlx = new System.Windows.Forms.ComboBox();
+            this.txtms = new System.Windows.Forms.TextBox();
+            this.txtytms = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,72 +169,16 @@
             // 
             this.txtlhid.Location = new System.Drawing.Point(154, 26);
             this.txtlhid.Name = "txtlhid";
-            this.txtlhid.ReadOnly = true;
             this.txtlhid.Size = new System.Drawing.Size(171, 25);
-            this.txtlhid.TabIndex = 12;
-            // 
-            // txtcpmc
-            // 
-            this.txtcpmc.Location = new System.Drawing.Point(576, 73);
-            this.txtcpmc.Name = "txtcpmc";
-            this.txtcpmc.Size = new System.Drawing.Size(177, 25);
-            this.txtcpmc.TabIndex = 13;
-            // 
-            // txtlhdm
-            // 
-            this.txtlhdm.Location = new System.Drawing.Point(576, 26);
-            this.txtlhdm.Name = "txtlhdm";
-            this.txtlhdm.Size = new System.Drawing.Size(177, 25);
-            this.txtlhdm.TabIndex = 14;
-            // 
-            // txtlhlx
-            // 
-            this.txtlhlx.Location = new System.Drawing.Point(154, 119);
-            this.txtlhlx.Name = "txtlhlx";
-            this.txtlhlx.Size = new System.Drawing.Size(171, 25);
-            this.txtlhlx.TabIndex = 15;
-            // 
-            // txtkh
-            // 
-            this.txtkh.Location = new System.Drawing.Point(154, 70);
-            this.txtkh.Name = "txtkh";
-            this.txtkh.Size = new System.Drawing.Size(171, 25);
-            this.txtkh.TabIndex = 16;
+            this.txtlhid.TabIndex = 0;
             // 
             // txtpx
             // 
-            this.txtpx.Location = new System.Drawing.Point(1241, 26);
+            this.txtpx.Location = new System.Drawing.Point(1241, 22);
             this.txtpx.Name = "txtpx";
             this.txtpx.Size = new System.Drawing.Size(156, 25);
-            this.txtpx.TabIndex = 17;
-            // 
-            // txtytms
-            // 
-            this.txtytms.Location = new System.Drawing.Point(938, 119);
-            this.txtytms.Name = "txtytms";
-            this.txtytms.Size = new System.Drawing.Size(169, 25);
-            this.txtytms.TabIndex = 18;
-            // 
-            // txtms
-            // 
-            this.txtms.Location = new System.Drawing.Point(938, 70);
-            this.txtms.Name = "txtms";
-            this.txtms.Size = new System.Drawing.Size(169, 25);
-            this.txtms.TabIndex = 19;
-            // 
-            // txtcwlx
-            // 
-            this.txtcwlx.Location = new System.Drawing.Point(938, 26);
-            this.txtcwlx.Name = "txtcwlx";
-            this.txtcwlx.Size = new System.Drawing.Size(169, 25);
-            this.txtcwlx.TabIndex = 20;
-            // 
-            // txtgg
-            // 
-            this.txtgg.Location = new System.Drawing.Point(576, 119);
-            this.txtgg.Name = "txtgg";
-            this.txtgg.Size = new System.Drawing.Size(177, 25);
-            this.txtgg.TabIndex = 21;
+            this.txtpx.TabIndex = 9;
+            this.txtpx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // checkBox1
             // 
@@ -250,7 +194,7 @@
             this.button1.Location = new System.Drawing.Point(1161, 122);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 10;
             this.button1.Text = "增加";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -265,23 +209,91 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtkh
+            // 
+            this.txtkh.FormattingEnabled = true;
+            this.txtkh.Location = new System.Drawing.Point(154, 70);
+            this.txtkh.Name = "txtkh";
+            this.txtkh.Size = new System.Drawing.Size(171, 23);
+            this.txtkh.TabIndex = 1;
+            this.txtkh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtlhlx
+            // 
+            this.txtlhlx.FormattingEnabled = true;
+            this.txtlhlx.Location = new System.Drawing.Point(154, 121);
+            this.txtlhlx.Name = "txtlhlx";
+            this.txtlhlx.Size = new System.Drawing.Size(171, 23);
+            this.txtlhlx.TabIndex = 2;
+            this.txtlhlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtlhdm
+            // 
+            this.txtlhdm.FormattingEnabled = true;
+            this.txtlhdm.Location = new System.Drawing.Point(576, 24);
+            this.txtlhdm.Name = "txtlhdm";
+            this.txtlhdm.Size = new System.Drawing.Size(177, 23);
+            this.txtlhdm.TabIndex = 3;
+            this.txtlhdm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtcpmc
+            // 
+            this.txtcpmc.FormattingEnabled = true;
+            this.txtcpmc.Location = new System.Drawing.Point(576, 70);
+            this.txtcpmc.Name = "txtcpmc";
+            this.txtcpmc.Size = new System.Drawing.Size(177, 23);
+            this.txtcpmc.TabIndex = 4;
+            this.txtcpmc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtgg
+            // 
+            this.txtgg.FormattingEnabled = true;
+            this.txtgg.Location = new System.Drawing.Point(576, 121);
+            this.txtgg.Name = "txtgg";
+            this.txtgg.Size = new System.Drawing.Size(177, 23);
+            this.txtgg.TabIndex = 5;
+            this.txtgg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtcwlx
+            // 
+            this.txtcwlx.FormattingEnabled = true;
+            this.txtcwlx.Location = new System.Drawing.Point(938, 32);
+            this.txtcwlx.Name = "txtcwlx";
+            this.txtcwlx.Size = new System.Drawing.Size(169, 23);
+            this.txtcwlx.TabIndex = 6;
+            this.txtcwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // txtms
+            // 
+            this.txtms.Location = new System.Drawing.Point(938, 73);
+            this.txtms.Name = "txtms";
+            this.txtms.Size = new System.Drawing.Size(169, 25);
+            this.txtms.TabIndex = 7;
+            // 
+            // txtytms
+            // 
+            this.txtytms.Location = new System.Drawing.Point(938, 119);
+            this.txtytms.Name = "txtytms";
+            this.txtytms.Size = new System.Drawing.Size(169, 25);
+            this.txtytms.TabIndex = 8;
+            // 
             // wlbm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1433, 688);
+            this.Controls.Add(this.txtytms);
+            this.Controls.Add(this.txtms);
+            this.Controls.Add(this.txtcwlx);
+            this.Controls.Add(this.txtgg);
+            this.Controls.Add(this.txtcpmc);
+            this.Controls.Add(this.txtlhdm);
+            this.Controls.Add(this.txtlhlx);
+            this.Controls.Add(this.txtkh);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.txtgg);
-            this.Controls.Add(this.txtcwlx);
-            this.Controls.Add(this.txtms);
-            this.Controls.Add(this.txtytms);
             this.Controls.Add(this.txtpx);
-            this.Controls.Add(this.txtkh);
-            this.Controls.Add(this.txtlhlx);
-            this.Controls.Add(this.txtlhdm);
-            this.Controls.Add(this.txtcpmc);
             this.Controls.Add(this.txtlhid);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -319,17 +331,17 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtlhid;
-        private System.Windows.Forms.TextBox txtcpmc;
-        private System.Windows.Forms.TextBox txtlhdm;
-        private System.Windows.Forms.TextBox txtlhlx;
-        private System.Windows.Forms.TextBox txtkh;
         private System.Windows.Forms.TextBox txtpx;
-        private System.Windows.Forms.TextBox txtytms;
-        private System.Windows.Forms.TextBox txtms;
-        private System.Windows.Forms.TextBox txtcwlx;
-        private System.Windows.Forms.TextBox txtgg;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox txtkh;
+        private System.Windows.Forms.ComboBox txtlhlx;
+        private System.Windows.Forms.ComboBox txtlhdm;
+        private System.Windows.Forms.ComboBox txtcpmc;
+        private System.Windows.Forms.ComboBox txtgg;
+        private System.Windows.Forms.ComboBox txtcwlx;
+        private System.Windows.Forms.TextBox txtms;
+        private System.Windows.Forms.TextBox txtytms;
     }
 }

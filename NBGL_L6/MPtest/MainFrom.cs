@@ -153,7 +153,9 @@ namespace MPtest
          * ******************************************/
         private void CreateFormInstance(string functionName)
         {
+
             Assembly asm = Assembly.Load("MPtest");//程序集名
+
             object frmObj = asm.CreateInstance("MPtest." + functionName);//程序集+form的类名。
             Form frms = (Form)frmObj;
             //    frms.Tag = functionName.ToString();
