@@ -615,5 +615,25 @@ namespace MPtest
                 return "fail";
             }
         }
+
+        //查找料号id下拉框
+        public DataTable czlhid(DataList list)
+        {
+            string sql =
+                    "SELECT lhid FROM hljd.df_material_basic "+
+                    "WHERE flag = 'Y'AND keh LIKE '%"+list.s_khmc+"%'AND lhlx LIKE '%%' AND lhdm LIKE '%%' "+
+                    " AND cpmc LIKE '%"+list.s_cpmc+"%' AND guig LIKE '%"+list.s_ggxh+"%' AND cwlx LIKE'%"+list.s_cwlx+"%'";
+            DataTable dt;
+            return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
+
+        public DataTable czcwlx(string lhid)
+        {
+            string sql =
+                    "SELECT * FROM hljd.df_material_basic " +
+                    "WHERE flag = 'Y'AND lhid = '" + lhid + "' ";
+            DataTable dt;
+            return dt = MysqlHelp.ExecuteReader(MysqlHelp.MySqlconn, sql);
+        }
     }
 }

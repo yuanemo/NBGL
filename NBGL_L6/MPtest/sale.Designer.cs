@@ -49,6 +49,10 @@
             this.s_11 = new System.Windows.Forms.Label();
             this.s_14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.s_cplh = new System.Windows.Forms.ComboBox();
+            this.s_xqsj = new System.Windows.Forms.DateTimePicker();
+            this.s_xdri = new System.Windows.Forms.DateTimePicker();
+            this.s_cwlx = new System.Windows.Forms.ComboBox();
             this.s_ggxh = new System.Windows.Forms.ComboBox();
             this.s_cpmc = new System.Windows.Forms.ComboBox();
             this.s_suil = new System.Windows.Forms.ComboBox();
@@ -62,7 +66,6 @@
             this.addBT = new System.Windows.Forms.Button();
             this.s_cpms = new System.Windows.Forms.TextBox();
             this.s_bz = new System.Windows.Forms.TextBox();
-            this.s_cplh = new System.Windows.Forms.TextBox();
             this.s_heth = new System.Windows.Forms.TextBox();
             this.s_htyj = new System.Windows.Forms.TextBox();
             this.s_shul = new System.Windows.Forms.TextBox();
@@ -70,15 +73,13 @@
             this.s_zongj = new System.Windows.Forms.TextBox();
             this.s_ddbh = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.s_skzt = new System.Windows.Forms.ComboBox();
+            this.s_kpzt = new System.Windows.Forms.ComboBox();
             this.x_add = new System.Windows.Forms.Button();
-            this.s_kprq = new System.Windows.Forms.TextBox();
-            this.s_skzt = new System.Windows.Forms.TextBox();
             this.s_kddh = new System.Windows.Forms.TextBox();
-            this.s_sksj = new System.Windows.Forms.TextBox();
             this.s_kdfy = new System.Windows.Forms.TextBox();
             this.s_sjxx = new System.Windows.Forms.TextBox();
             this.s_fpbh = new System.Windows.Forms.TextBox();
-            this.s_kpzt = new System.Windows.Forms.TextBox();
             this.sk_01 = new System.Windows.Forms.Label();
             this.sk_02 = new System.Windows.Forms.Label();
             this.sk_08 = new System.Windows.Forms.Label();
@@ -90,9 +91,8 @@
             this.sk_07 = new System.Windows.Forms.Label();
             this.sk_06 = new System.Windows.Forms.Label();
             this.grd = new System.Windows.Forms.DataGridView();
-            this.s_cwlx = new System.Windows.Forms.ComboBox();
-            this.s_xdri = new System.Windows.Forms.DateTimePicker();
-            this.s_xqsj = new System.Windows.Forms.DateTimePicker();
+            this.s_kprq = new System.Windows.Forms.DateTimePicker();
+            this.s_sksj = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
@@ -137,7 +137,7 @@
             // s_5
             // 
             this.s_5.AutoSize = true;
-            this.s_5.Location = new System.Drawing.Point(443, 35);
+            this.s_5.Location = new System.Drawing.Point(507, 32);
             this.s_5.Name = "s_5";
             this.s_5.Size = new System.Drawing.Size(67, 15);
             this.s_5.TabIndex = 4;
@@ -146,7 +146,7 @@
             // s_8
             // 
             this.s_8.AutoSize = true;
-            this.s_8.Location = new System.Drawing.Point(689, 38);
+            this.s_8.Location = new System.Drawing.Point(753, 35);
             this.s_8.Name = "s_8";
             this.s_8.Size = new System.Drawing.Size(37, 15);
             this.s_8.TabIndex = 5;
@@ -155,7 +155,7 @@
             // s_19
             // 
             this.s_19.AutoSize = true;
-            this.s_19.Location = new System.Drawing.Point(443, 190);
+            this.s_19.Location = new System.Drawing.Point(507, 187);
             this.s_19.Name = "s_19";
             this.s_19.Size = new System.Drawing.Size(67, 15);
             this.s_19.TabIndex = 6;
@@ -164,7 +164,7 @@
             // s_9
             // 
             this.s_9.AutoSize = true;
-            this.s_9.Location = new System.Drawing.Point(659, 83);
+            this.s_9.Location = new System.Drawing.Point(723, 80);
             this.s_9.Name = "s_9";
             this.s_9.Size = new System.Drawing.Size(67, 15);
             this.s_9.TabIndex = 7;
@@ -173,7 +173,7 @@
             // s_10
             // 
             this.s_10.AutoSize = true;
-            this.s_10.Location = new System.Drawing.Point(659, 130);
+            this.s_10.Location = new System.Drawing.Point(723, 127);
             this.s_10.Name = "s_10";
             this.s_10.Size = new System.Drawing.Size(67, 15);
             this.s_10.TabIndex = 8;
@@ -209,7 +209,7 @@
             // s_6
             // 
             this.s_6.AutoSize = true;
-            this.s_6.Location = new System.Drawing.Point(443, 83);
+            this.s_6.Location = new System.Drawing.Point(507, 80);
             this.s_6.Name = "s_6";
             this.s_6.Size = new System.Drawing.Size(67, 15);
             this.s_6.TabIndex = 12;
@@ -218,7 +218,7 @@
             // s_7
             // 
             this.s_7.AutoSize = true;
-            this.s_7.Location = new System.Drawing.Point(443, 130);
+            this.s_7.Location = new System.Drawing.Point(507, 127);
             this.s_7.Name = "s_7";
             this.s_7.Size = new System.Drawing.Size(67, 15);
             this.s_7.TabIndex = 13;
@@ -227,7 +227,7 @@
             // s_16
             // 
             this.s_16.AutoSize = true;
-            this.s_16.Location = new System.Drawing.Point(1113, 134);
+            this.s_16.Location = new System.Drawing.Point(1177, 131);
             this.s_16.Name = "s_16";
             this.s_16.Size = new System.Drawing.Size(37, 15);
             this.s_16.TabIndex = 14;
@@ -236,7 +236,7 @@
             // s_13
             // 
             this.s_13.AutoSize = true;
-            this.s_13.Location = new System.Drawing.Point(864, 130);
+            this.s_13.Location = new System.Drawing.Point(928, 127);
             this.s_13.Name = "s_13";
             this.s_13.Size = new System.Drawing.Size(67, 15);
             this.s_13.TabIndex = 15;
@@ -245,7 +245,7 @@
             // s_12
             // 
             this.s_12.AutoSize = true;
-            this.s_12.Location = new System.Drawing.Point(879, 83);
+            this.s_12.Location = new System.Drawing.Point(943, 80);
             this.s_12.Name = "s_12";
             this.s_12.Size = new System.Drawing.Size(52, 15);
             this.s_12.TabIndex = 16;
@@ -254,7 +254,7 @@
             // s_15
             // 
             this.s_15.AutoSize = true;
-            this.s_15.Location = new System.Drawing.Point(1113, 86);
+            this.s_15.Location = new System.Drawing.Point(1177, 83);
             this.s_15.Name = "s_15";
             this.s_15.Size = new System.Drawing.Size(37, 15);
             this.s_15.TabIndex = 17;
@@ -263,7 +263,7 @@
             // s_11
             // 
             this.s_11.AutoSize = true;
-            this.s_11.Location = new System.Drawing.Point(890, 32);
+            this.s_11.Location = new System.Drawing.Point(954, 29);
             this.s_11.Name = "s_11";
             this.s_11.Size = new System.Drawing.Size(37, 15);
             this.s_11.TabIndex = 18;
@@ -272,7 +272,7 @@
             // s_14
             // 
             this.s_14.AutoSize = true;
-            this.s_14.Location = new System.Drawing.Point(1113, 35);
+            this.s_14.Location = new System.Drawing.Point(1177, 32);
             this.s_14.Name = "s_14";
             this.s_14.Size = new System.Drawing.Size(37, 15);
             this.s_14.TabIndex = 19;
@@ -280,6 +280,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.s_cplh);
             this.groupBox1.Controls.Add(this.s_xqsj);
             this.groupBox1.Controls.Add(this.s_xdri);
             this.groupBox1.Controls.Add(this.s_cwlx);
@@ -296,7 +297,6 @@
             this.groupBox1.Controls.Add(this.addBT);
             this.groupBox1.Controls.Add(this.s_cpms);
             this.groupBox1.Controls.Add(this.s_bz);
-            this.groupBox1.Controls.Add(this.s_cplh);
             this.groupBox1.Controls.Add(this.s_heth);
             this.groupBox1.Controls.Add(this.s_htyj);
             this.groupBox1.Controls.Add(this.s_shul);
@@ -328,10 +328,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "客户下单";
             // 
+            // s_cplh
+            // 
+            this.s_cplh.FormattingEnabled = true;
+            this.s_cplh.Location = new System.Drawing.Point(803, 83);
+            this.s_cplh.Name = "s_cplh";
+            this.s_cplh.Size = new System.Drawing.Size(121, 23);
+            this.s_cplh.TabIndex = 10;
+            this.s_cplh.Enter += new System.EventHandler(this.s_cplh_Enter);
+            this.s_cplh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_xqsj
+            // 
+            this.s_xqsj.Location = new System.Drawing.Point(310, 127);
+            this.s_xqsj.Name = "s_xqsj";
+            this.s_xqsj.Size = new System.Drawing.Size(137, 25);
+            this.s_xqsj.TabIndex = 5;
+            this.s_xqsj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_xdri
+            // 
+            this.s_xdri.Location = new System.Drawing.Point(310, 78);
+            this.s_xdri.Name = "s_xdri";
+            this.s_xdri.Size = new System.Drawing.Size(137, 25);
+            this.s_xdri.TabIndex = 4;
+            this.s_xdri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_cwlx
+            // 
+            this.s_cwlx.FormattingEnabled = true;
+            this.s_cwlx.Location = new System.Drawing.Point(803, 126);
+            this.s_cwlx.Name = "s_cwlx";
+            this.s_cwlx.Size = new System.Drawing.Size(121, 23);
+            this.s_cwlx.TabIndex = 11;
+            this.s_cwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
             // s_ggxh
             // 
             this.s_ggxh.FormattingEnabled = true;
-            this.s_ggxh.Location = new System.Drawing.Point(531, 126);
+            this.s_ggxh.Location = new System.Drawing.Point(595, 123);
             this.s_ggxh.Name = "s_ggxh";
             this.s_ggxh.Size = new System.Drawing.Size(121, 23);
             this.s_ggxh.TabIndex = 8;
@@ -340,7 +375,7 @@
             // s_cpmc
             // 
             this.s_cpmc.FormattingEnabled = true;
-            this.s_cpmc.Location = new System.Drawing.Point(531, 80);
+            this.s_cpmc.Location = new System.Drawing.Point(595, 77);
             this.s_cpmc.Name = "s_cpmc";
             this.s_cpmc.Size = new System.Drawing.Size(121, 23);
             this.s_cpmc.TabIndex = 7;
@@ -349,7 +384,7 @@
             // s_suil
             // 
             this.s_suil.FormattingEnabled = true;
-            this.s_suil.Location = new System.Drawing.Point(739, 32);
+            this.s_suil.Location = new System.Drawing.Point(803, 29);
             this.s_suil.Name = "s_suil";
             this.s_suil.Size = new System.Drawing.Size(121, 23);
             this.s_suil.TabIndex = 9;
@@ -358,7 +393,7 @@
             // s_cplx
             // 
             this.s_cplx.FormattingEnabled = true;
-            this.s_cplx.Location = new System.Drawing.Point(531, 34);
+            this.s_cplx.Location = new System.Drawing.Point(595, 31);
             this.s_cplx.Name = "s_cplx";
             this.s_cplx.Size = new System.Drawing.Size(121, 23);
             this.s_cplx.TabIndex = 6;
@@ -367,16 +402,16 @@
             // s_cgry
             // 
             this.s_cgry.FormattingEnabled = true;
-            this.s_cgry.Location = new System.Drawing.Point(316, 32);
+            this.s_cgry.Location = new System.Drawing.Point(308, 29);
             this.s_cgry.Name = "s_cgry";
-            this.s_cgry.Size = new System.Drawing.Size(121, 23);
+            this.s_cgry.Size = new System.Drawing.Size(139, 23);
             this.s_cgry.TabIndex = 3;
             this.s_cgry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_danw
             // 
             this.s_danw.FormattingEnabled = true;
-            this.s_danw.Location = new System.Drawing.Point(946, 35);
+            this.s_danw.Location = new System.Drawing.Point(1010, 32);
             this.s_danw.Name = "s_danw";
             this.s_danw.Size = new System.Drawing.Size(121, 23);
             this.s_danw.TabIndex = 12;
@@ -402,7 +437,7 @@
             // 
             // qkwbk
             // 
-            this.qkwbk.Location = new System.Drawing.Point(946, 191);
+            this.qkwbk.Location = new System.Drawing.Point(1010, 188);
             this.qkwbk.Name = "qkwbk";
             this.qkwbk.Size = new System.Drawing.Size(100, 26);
             this.qkwbk.TabIndex = 42;
@@ -412,7 +447,7 @@
             // 
             // alter
             // 
-            this.alter.Location = new System.Drawing.Point(1183, 191);
+            this.alter.Location = new System.Drawing.Point(1247, 188);
             this.alter.Name = "alter";
             this.alter.Size = new System.Drawing.Size(100, 26);
             this.alter.TabIndex = 41;
@@ -422,7 +457,7 @@
             // 
             // addBT
             // 
-            this.addBT.Location = new System.Drawing.Point(1060, 191);
+            this.addBT.Location = new System.Drawing.Point(1124, 188);
             this.addBT.Name = "addBT";
             this.addBT.Size = new System.Drawing.Size(105, 26);
             this.addBT.TabIndex = 40;
@@ -432,9 +467,9 @@
             // 
             // s_cpms
             // 
-            this.s_cpms.Location = new System.Drawing.Point(531, 190);
+            this.s_cpms.Location = new System.Drawing.Point(595, 187);
             this.s_cpms.Name = "s_cpms";
-            this.s_cpms.Size = new System.Drawing.Size(308, 25);
+            this.s_cpms.Size = new System.Drawing.Size(329, 25);
             this.s_cpms.TabIndex = 19;
             this.s_cpms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
@@ -446,33 +481,25 @@
             this.s_bz.TabIndex = 18;
             this.s_bz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
-            // s_cplh
-            // 
-            this.s_cplh.Location = new System.Drawing.Point(739, 76);
-            this.s_cplh.Name = "s_cplh";
-            this.s_cplh.Size = new System.Drawing.Size(100, 25);
-            this.s_cplh.TabIndex = 10;
-            this.s_cplh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
             // s_heth
             // 
-            this.s_heth.Location = new System.Drawing.Point(946, 80);
+            this.s_heth.Location = new System.Drawing.Point(1010, 77);
             this.s_heth.Name = "s_heth";
-            this.s_heth.Size = new System.Drawing.Size(100, 25);
+            this.s_heth.Size = new System.Drawing.Size(121, 25);
             this.s_heth.TabIndex = 13;
             this.s_heth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_htyj
             // 
-            this.s_htyj.Location = new System.Drawing.Point(946, 127);
+            this.s_htyj.Location = new System.Drawing.Point(1010, 124);
             this.s_htyj.Name = "s_htyj";
-            this.s_htyj.Size = new System.Drawing.Size(100, 25);
+            this.s_htyj.Size = new System.Drawing.Size(121, 25);
             this.s_htyj.TabIndex = 14;
             this.s_htyj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_shul
             // 
-            this.s_shul.Location = new System.Drawing.Point(1183, 32);
+            this.s_shul.Location = new System.Drawing.Point(1247, 29);
             this.s_shul.Name = "s_shul";
             this.s_shul.Size = new System.Drawing.Size(100, 25);
             this.s_shul.TabIndex = 15;
@@ -481,7 +508,7 @@
             // 
             // s_danj
             // 
-            this.s_danj.Location = new System.Drawing.Point(1183, 80);
+            this.s_danj.Location = new System.Drawing.Point(1247, 77);
             this.s_danj.Name = "s_danj";
             this.s_danj.Size = new System.Drawing.Size(100, 25);
             this.s_danj.TabIndex = 16;
@@ -490,7 +517,7 @@
             // 
             // s_zongj
             // 
-            this.s_zongj.Location = new System.Drawing.Point(1183, 127);
+            this.s_zongj.Location = new System.Drawing.Point(1247, 124);
             this.s_zongj.Name = "s_zongj";
             this.s_zongj.Size = new System.Drawing.Size(100, 25);
             this.s_zongj.TabIndex = 17;
@@ -501,20 +528,20 @@
             this.s_ddbh.Location = new System.Drawing.Point(75, 41);
             this.s_ddbh.Name = "s_ddbh";
             this.s_ddbh.Size = new System.Drawing.Size(100, 25);
-            this.s_ddbh.TabIndex = 22;
+            this.s_ddbh.TabIndex = 30;
             this.s_ddbh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_ddbh_KeyDown);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.x_add);
+            this.groupBox2.Controls.Add(this.s_sksj);
             this.groupBox2.Controls.Add(this.s_kprq);
             this.groupBox2.Controls.Add(this.s_skzt);
+            this.groupBox2.Controls.Add(this.s_kpzt);
+            this.groupBox2.Controls.Add(this.x_add);
             this.groupBox2.Controls.Add(this.s_kddh);
-            this.groupBox2.Controls.Add(this.s_sksj);
             this.groupBox2.Controls.Add(this.s_kdfy);
             this.groupBox2.Controls.Add(this.s_sjxx);
             this.groupBox2.Controls.Add(this.s_fpbh);
-            this.groupBox2.Controls.Add(this.s_kpzt);
             this.groupBox2.Controls.Add(this.sk_01);
             this.groupBox2.Controls.Add(this.sk_02);
             this.groupBox2.Controls.Add(this.sk_08);
@@ -534,6 +561,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "收款";
             // 
+            // s_skzt
+            // 
+            this.s_skzt.FormattingEnabled = true;
+            this.s_skzt.Location = new System.Drawing.Point(522, 100);
+            this.s_skzt.Name = "s_skzt";
+            this.s_skzt.Size = new System.Drawing.Size(121, 23);
+            this.s_skzt.TabIndex = 34;
+            this.s_skzt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
+            // s_kpzt
+            // 
+            this.s_kpzt.FormattingEnabled = true;
+            this.s_kpzt.Location = new System.Drawing.Point(293, 35);
+            this.s_kpzt.Name = "s_kpzt";
+            this.s_kpzt.Size = new System.Drawing.Size(121, 23);
+            this.s_kpzt.TabIndex = 31;
+            this.s_kpzt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            // 
             // x_add
             // 
             this.x_add.Location = new System.Drawing.Point(75, 86);
@@ -544,61 +589,37 @@
             this.x_add.UseVisualStyleBackColor = true;
             this.x_add.Click += new System.EventHandler(this.x_add_Click);
             // 
-            // s_kprq
-            // 
-            this.s_kprq.Location = new System.Drawing.Point(522, 32);
-            this.s_kprq.Name = "s_kprq";
-            this.s_kprq.Size = new System.Drawing.Size(100, 25);
-            this.s_kprq.TabIndex = 38;
-            // 
-            // s_skzt
-            // 
-            this.s_skzt.Location = new System.Drawing.Point(522, 98);
-            this.s_skzt.Name = "s_skzt";
-            this.s_skzt.Size = new System.Drawing.Size(100, 25);
-            this.s_skzt.TabIndex = 37;
-            // 
             // s_kddh
             // 
             this.s_kddh.Location = new System.Drawing.Point(730, 35);
             this.s_kddh.Name = "s_kddh";
             this.s_kddh.Size = new System.Drawing.Size(100, 25);
             this.s_kddh.TabIndex = 35;
-            // 
-            // s_sksj
-            // 
-            this.s_sksj.Location = new System.Drawing.Point(730, 101);
-            this.s_sksj.Name = "s_sksj";
-            this.s_sksj.Size = new System.Drawing.Size(100, 25);
-            this.s_sksj.TabIndex = 34;
+            this.s_kddh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_kdfy
             // 
             this.s_kdfy.Location = new System.Drawing.Point(959, 38);
             this.s_kdfy.Name = "s_kdfy";
             this.s_kdfy.Size = new System.Drawing.Size(100, 25);
-            this.s_kdfy.TabIndex = 31;
+            this.s_kdfy.TabIndex = 37;
+            this.s_kdfy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_sjxx
             // 
             this.s_sjxx.Location = new System.Drawing.Point(1174, 35);
             this.s_sjxx.Name = "s_sjxx";
             this.s_sjxx.Size = new System.Drawing.Size(100, 25);
-            this.s_sjxx.TabIndex = 28;
+            this.s_sjxx.TabIndex = 38;
+            this.s_sjxx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // s_fpbh
             // 
             this.s_fpbh.Location = new System.Drawing.Point(308, 94);
             this.s_fpbh.Name = "s_fpbh";
             this.s_fpbh.Size = new System.Drawing.Size(100, 25);
-            this.s_fpbh.TabIndex = 21;
-            // 
-            // s_kpzt
-            // 
-            this.s_kpzt.Location = new System.Drawing.Point(308, 35);
-            this.s_kpzt.Name = "s_kpzt";
-            this.s_kpzt.Size = new System.Drawing.Size(100, 25);
-            this.s_kpzt.TabIndex = 20;
+            this.s_fpbh.TabIndex = 32;
+            this.s_fpbh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
             // sk_01
             // 
@@ -693,37 +714,27 @@
             // grd
             // 
             this.grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd.Location = new System.Drawing.Point(21, 282);
+            this.grd.Location = new System.Drawing.Point(19, 290);
             this.grd.Name = "grd";
             this.grd.RowTemplate.Height = 27;
             this.grd.Size = new System.Drawing.Size(1591, 261);
             this.grd.TabIndex = 22;
             this.grd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_CellContentClick);
             // 
-            // s_cwlx
+            // s_kprq
             // 
-            this.s_cwlx.FormattingEnabled = true;
-            this.s_cwlx.Location = new System.Drawing.Point(739, 129);
-            this.s_cwlx.Name = "s_cwlx";
-            this.s_cwlx.Size = new System.Drawing.Size(121, 23);
-            this.s_cwlx.TabIndex = 11;
-            this.s_cwlx.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            this.s_kprq.Location = new System.Drawing.Point(508, 34);
+            this.s_kprq.Name = "s_kprq";
+            this.s_kprq.Size = new System.Drawing.Size(136, 25);
+            this.s_kprq.TabIndex = 33;
+            this.s_kprq.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
             // 
-            // s_xdri
+            // s_sksj
             // 
-            this.s_xdri.Location = new System.Drawing.Point(310, 83);
-            this.s_xdri.Name = "s_xdri";
-            this.s_xdri.Size = new System.Drawing.Size(137, 25);
-            this.s_xdri.TabIndex = 4;
-            this.s_xdri.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
-            // 
-            // s_xqsj
-            // 
-            this.s_xqsj.Location = new System.Drawing.Point(310, 127);
-            this.s_xqsj.Name = "s_xqsj";
-            this.s_xqsj.Size = new System.Drawing.Size(137, 25);
-            this.s_xqsj.TabIndex = 5;
-            this.s_xqsj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.s_khmc_KeyDown);
+            this.s_sksj.Location = new System.Drawing.Point(724, 97);
+            this.s_sksj.Name = "s_sksj";
+            this.s_sksj.Size = new System.Drawing.Size(132, 25);
+            this.s_sksj.TabIndex = 36;
             // 
             // sale
             // 
@@ -771,7 +782,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox s_cpms;
         private System.Windows.Forms.TextBox s_bz;
-        private System.Windows.Forms.TextBox s_cplh;
         private System.Windows.Forms.TextBox s_heth;
         private System.Windows.Forms.TextBox s_htyj;
         private System.Windows.Forms.TextBox s_shul;
@@ -779,14 +789,10 @@
         private System.Windows.Forms.TextBox s_zongj;
         private System.Windows.Forms.TextBox s_ddbh;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox s_kprq;
-        private System.Windows.Forms.TextBox s_skzt;
         private System.Windows.Forms.TextBox s_kddh;
-        private System.Windows.Forms.TextBox s_sksj;
         private System.Windows.Forms.TextBox s_kdfy;
         private System.Windows.Forms.TextBox s_sjxx;
         private System.Windows.Forms.TextBox s_fpbh;
-        private System.Windows.Forms.TextBox s_kpzt;
         private System.Windows.Forms.Label sk_01;
         private System.Windows.Forms.Label sk_02;
         private System.Windows.Forms.Label sk_08;
@@ -813,5 +819,10 @@
         private System.Windows.Forms.ComboBox s_cwlx;
         private System.Windows.Forms.DateTimePicker s_xdri;
         private System.Windows.Forms.DateTimePicker s_xqsj;
+        private System.Windows.Forms.ComboBox s_cplh;
+        private System.Windows.Forms.ComboBox s_skzt;
+        private System.Windows.Forms.ComboBox s_kpzt;
+        private System.Windows.Forms.DateTimePicker s_sksj;
+        private System.Windows.Forms.DateTimePicker s_kprq;
     }
 }

@@ -58,6 +58,9 @@ namespace MPtest
             s_ggxh.Items.Clear();
             s_cpmc.Items.Clear();
             s_cwlx.Items.Clear();
+
+            s_kpzt.Items.Clear();
+            s_skzt.Items.Clear();
             //s_cplx.Items.Clear();
             string xlk;
             DataTable dt = crud.qbxlk();
@@ -75,6 +78,8 @@ namespace MPtest
                     case "产品名称": s_cpmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
                     case "规格型号": s_ggxh.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
                     case "财务类型": s_cwlx.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "开票状态": s_kpzt.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
+                    case "收款状态": s_skzt.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
                         //case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
                         //case "客户": s_khmc.Items.Add(dt.Rows[i]["PRIDISPLAYNAME"]); break;
 
@@ -143,7 +148,7 @@ namespace MPtest
                     switch (cb.TabIndex)
                     {
                         case 0:
-                            TT = "客户名称";
+                            TT = label1.Text;
                             break;
                         case 1:
                             TT = label11.Text;
@@ -204,6 +209,32 @@ namespace MPtest
                         case 19:
                             TT = s_19.Text;
                             break;
+
+                        case 31:
+                            TT = sk_01.Text;
+                            break;
+                        case 32:
+                            TT = sk_02.Text;
+                            break;
+                        case 33:
+                            TT = sk_03.Text;
+                            break;
+                        case 34:
+                            TT = sk_04.Text;
+                            break;
+                        case 35:
+                            TT = sk_05.Text;
+                            break;
+                        case 36:
+                            TT = sk_06.Text;
+                            break;
+                        case 37:
+                            TT = sk_07.Text;
+                            break;
+                        case 38:
+                            TT = sk_08.Text;
+                            break;
+
                         default:
                             TT = "0";
                             break;
@@ -214,6 +245,7 @@ namespace MPtest
                         MessageBox.Show("" + TT + "不能为空");
                         return;
                     }
+
                     SendKeys.SendWait("{tab}");
                 }
             }
@@ -287,6 +319,32 @@ namespace MPtest
                         case 19:
                             TT = s_19.Text;
                             break;
+
+                        case 31:
+                            TT = sk_01.Text;
+                            break;
+                        case 32:
+                            TT = sk_02.Text;
+                            break;
+                        case 33:
+                            TT = sk_03.Text;
+                            break;
+                        case 34:
+                            TT = sk_04.Text;
+                            break;
+                        case 35:
+                            TT = sk_05.Text;
+                            break;
+                        case 36:
+                            TT = sk_06.Text;
+                            break;
+                        case 37:
+                            TT = sk_07.Text;
+                            break;
+                        case 38:
+                            TT = sk_08.Text;
+                            break;
+
                         default:
                             TT = "0";
                             break;
@@ -295,6 +353,14 @@ namespace MPtest
                     if (cb.Text.Trim() == "")
                     {
                         MessageBox.Show("" + TT + "不能为空");
+                        return;
+                    }
+                    
+                    TimeSpan ts1 = new TimeSpan(s_xqsj.Value.Ticks);
+                    TimeSpan ts2 = new TimeSpan(s_xdri.Value.Ticks);
+                    if (ts1.TotalDays <= ts2.TotalDays)
+                    {
+                        MessageBox.Show("收款时间不可以比"+"下单时间早");
                         return;
                     }
                     SendKeys.SendWait("{tab}");
@@ -340,7 +406,11 @@ namespace MPtest
                             TT = s_8.Text;
                             break;
                         case 10:
-                            TT = s_9.Text;
+                            {
+                                TT = s_9.Text;
+                                DataTable bt = crud.czcwlx(s_cplh.Text);
+                                s_cwlx.Text = bt.Rows[0]["cwlx"].ToString();
+                            }
                             break;
                         case 11:
                             TT = s_10.Text;
@@ -370,6 +440,32 @@ namespace MPtest
                         case 19:
                             TT = s_19.Text;
                             break;
+
+                        case 31:
+                            TT = sk_01.Text;
+                            break;
+                        case 32:
+                            TT = sk_02.Text;
+                            break;
+                        case 33:
+                            TT = sk_03.Text;
+                            break;
+                        case 34:
+                            TT = sk_04.Text;
+                            break;
+                        case 35:
+                            TT = sk_05.Text;
+                            break;
+                        case 36:
+                            TT = sk_06.Text;
+                            break;
+                        case 37:
+                            TT = sk_07.Text;
+                            break;
+                        case 38:
+                            TT = sk_08.Text;
+                            break;
+
                         default:
                             TT = "0";
                             break;
@@ -388,7 +484,7 @@ namespace MPtest
                             case "客户名称":
                                 if (dt.Rows[i]["family_remark"].ToString() == "客户" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_khmc.Text)
                                 {
-
+                                    SendKeys.SendWait("{tab}");
                                     return;
                                 }
                                 else if (i == dt.Rows.Count - 1)
@@ -529,6 +625,40 @@ namespace MPtest
                                     }
                                 }
                                 break;
+
+
+                            case "收款状态":
+                                if (dt.Rows[i]["family_remark"].ToString() == "收款状态" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_skzt.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_skzt.Text, "收款状态") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
+                                break;
+                            case "开票状态":
+                                if (dt.Rows[i]["family_remark"].ToString() == "开票状态" && dt.Rows[i]["PRIDISPLAYNAME"].ToString() == s_kpzt.Text)
+                                {
+                                    SendKeys.SendWait("{tab}");
+                                    return;
+                                }
+                                else if (i == dt.Rows.Count - 1)
+                                {
+                                    if (crud.Addxlk(s_kpzt.Text, "开票状态") == "success")
+                                    {
+                                        MessageBox.Show(TT + "添加成功！");
+                                        xlkxs();
+                                        databind();
+                                    }
+                                }
+                                break;
                         }
 
                     }
@@ -567,12 +697,21 @@ namespace MPtest
                         MessageBox.Show("请先输入参数!");
                         return;
                     }
+
+            TimeSpan ts1 = new TimeSpan(s_xqsj.Value.Ticks);
+            TimeSpan ts2 = new TimeSpan(s_xdri.Value.Ticks);
+            if (ts1.TotalDays <= ts2.TotalDays)
+            {
+                MessageBox.Show("收款时间不可以比" + "下单时间早");
+                return;
+            }
+
             string time = DateTime.Now.ToString("yyMMdd");
             DataList list = new DataList();
             DataTable dt = crud.czddbh(time);
             if (dt == null)
             {
-                list.s_ddbh = time + "0001";
+                list.s_ddbh = time + "0051";
             }
             else
                 list.s_ddbh = (Convert.ToInt32(dt.Rows[0]["lotid"].ToString())+1).ToString();
@@ -606,6 +745,16 @@ namespace MPtest
             {
                 MessageBox.Show("订单"+list.s_ddbh +"下单成功！");
                 databind();
+
+                for (int i = 0; i < grd.Rows.Count; i++)
+                {
+                    if (grd.Rows[i].Cells["订单编号"].Value.ToString() == list.s_ddbh)
+                    {
+                        grd.Rows[i].Selected = true;
+                        //第一行显示为*****的
+                        grd.FirstDisplayedScrollingRowIndex = i;
+                    }
+                }
             }
         }
         //订单编号回车
@@ -615,7 +764,8 @@ namespace MPtest
             {
 
                 DataTable dt = crud.czSK(s_ddbh.Text);
-
+                if(dt!=null)
+                { 
                 s_khmc.Text = dt.Rows[0]["kehu"].ToString();
                 s_ghgs.Text = dt.Rows[0]["ghgs"].ToString();
                 s_ddbh.Text = dt.Rows[0]["lotid"].ToString();
@@ -652,7 +802,7 @@ namespace MPtest
                 s_kdfy.Text = dt.Rows[0]["kdfy"].ToString();
                 s_sjxx.Text = dt.Rows[0]["sjxi"].ToString();
 
-
+                }
             }
         }
         //修改收款
@@ -694,6 +844,17 @@ namespace MPtest
 
 
                 databind();
+
+                //将光标显示在当前行
+                for (int i = 0; i < grd.Rows.Count; i++)
+                {
+                    if (grd.Rows[i].Cells["订单编号"].Value.ToString() == list.s_ddbh)
+                    {
+                        grd.Rows[i].Selected = true;
+                        grd.FirstDisplayedScrollingRowIndex=i;
+                    }
+                }
+
             }
 
         }
@@ -736,6 +897,16 @@ namespace MPtest
             {
                 MessageBox.Show("订单" + list.s_ddbh + ",修改下单成功！");
                 databind();
+                //将光标显示在当前行
+                for (int i = 0; i < grd.Rows.Count; i++)
+                {
+                    if (grd.Rows[i].Cells["订单编号"].Value.ToString() == list.s_ddbh)
+                    {
+                        grd.Rows[i].Selected = true;
+                        grd.FirstDisplayedScrollingRowIndex = i;
+                    }
+                }
+
             }
         }
         //供货公司按回车
@@ -834,6 +1005,49 @@ namespace MPtest
         private void sale_Shown(object sender, EventArgs e)
         {
 
+        }
+        //产品料号下拉框
+        private void s_cplh_Enter(object sender, EventArgs e)
+        {
+            DataList list = new DataList();
+            list.s_cpmc = s_cpmc.Text;
+            list.s_khmc = s_khmc.Text;
+            list.s_ghgs = s_ghgs.Text;
+            list.s_cgry = s_cgry.Text;
+            list.s_xdri = s_xdri.Text;
+            list.s_xqsj = s_xqsj.Text;
+            list.s_cplx = s_cplx.Text;
+            list.s_ggxh = s_ggxh.Text;
+
+
+            list.s_cwlx = s_cwlx.Text;
+            list.s_suil = s_suil.Text;
+            list.s_cplh = s_cplh.Text;
+            list.s_cwlx = s_cwlx.Text;
+            list.s_danw = s_danw.Text;
+            list.s_heth = s_heth.Text;
+
+            list.s_shul = s_shul.Text;
+            list.s_danj = s_danj.Text;
+            list.s_zongj = s_zongj.Text;
+            list.s_cpmc = s_cpmc.Text;
+            list.s_cpms = s_cpms.Text;
+            list.s_beiz = s_bz.Text;
+            list.s_user = MainFrom.USERID;
+            s_cplh.Items.Clear();
+            DataTable dt = crud.czlhid(list);
+            if (dt != null)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    s_cplh.Items.Add(dt.Rows[i]["lhid"]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("无对应物料编号,请添加");
+                return;
+            }
         }
     }
 }
